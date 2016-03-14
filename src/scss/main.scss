@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'LatoLatinWebRegular';
+  src: url('../fonts/LatoLatin-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/LatoLatin-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/LatoLatin-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('../fonts/LatoLatin-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/LatoLatin-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'baseticamedium';
+  src: url('../fonts/basetica-med-webfont.eot');
+  src: url('../fonts/basetica-med-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/basetica-med-webfont.woff2') format('woff2'),
+       url('../fonts/basetica-med-webfont.woff') format('woff'),
+       url('../fonts/basetica-med-webfont.ttf') format('truetype'),
+       url('../fonts/basetica-med-webfont.svg#baseticamedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  
+}
+@import 'reset';
+@import 'variable';
+@import 'mixins';
+@import 'grid';
+@import 'globals';
+@import 'header';
+@import 'portfolio';
+@import 'github';
+@import 'flickr';
+@import 'footer';
+
+.content {
+  padding-bottom: 80px;
+}
+.b-lazy {
+  transition: opacity 500ms ease-in-out;
+  max-width: 100%;
+  opacity: 0;
+}
+.b-lazy.b-loaded {
+  opacity: 1;
+}
+.white aside,
+.white h1 {
+  color: #fcfcfc;
+}
+.overlay-holder {
+  opacity : 0;
+}
+.overlay{
+  width: 100%;
+  height: 100%;
+  opacity : 0.2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #111;
+  z-index: 2;
+  transition: opacity .2s ease-in-out;
+}
+.side-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -320px;
+  width: 320px;
+  height: 100%;
+  background-color: #eee;
+  overflow: hidden;
+  transition: transform .25s linear;
+  z-index: 3;
+  transform: translateX(0px);
+  overflow: auto;
+  padding: 0 20px;
+  .close-side-menu {
+    margin-top: 20px;
+    display: block;
+    cursor: pointer;
+  }
+  ul {
+    margin: 2em 0;
+    li {
+      margin: .6em 0;
+      > a {
+        font-size: 3.6em;
+      }
+      a {
+        text-decoration: none;
+        &:hover {
+          color: #000;
+        }
+      }
+      p {
+        a {
+          font-size: inherit;
+        }
+      } 
+    } 
+  } 
+}
+.side-menu-showing {
+  overflow: hidden;
+  .side-menu, 
+  .content-wrapper,
+  .post-wrapper,
+  .header-wrapper,
+  .video-container {
+    transform: translateX(-320px);
+  }
+}
+#learn-more {
+  p {
+    display: inline-block;
+    max-width: 768px;
+    font-size: 2.4em;
+    a {
+      font-size: inherit;
+    }
+  }
+}
+
+@import 'blog';
+@import 'mediaqueries';

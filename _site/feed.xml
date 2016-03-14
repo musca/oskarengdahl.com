@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://musca.se/feed.xml" rel="self" type="application/atom+xml" /><link href="http://musca.se/" rel="alternate" type="text/html" /><updated>2016-03-14T10:54:11+01:00</updated><id>http://musca.se/</id><title>musca.se</title><subtitle>This is where I keep a blog about my github projects, web design &amp; development.</subtitle><entry><title>Midlay the images don’t overlay them</title><link href="http://musca.se/blog/2015/10/23/midlay-not-overlay.html" rel="alternate" type="text/html" title="Midlay the images don&#39;t overlay them" /><published>2015-10-23T15:42:00+02:00</published><updated>2015-10-23T15:42:00+02:00</updated><id>http://musca.se/blog/2015/10/23/midlay-not-overlay</id><content type="html" xml:base="http://musca.se/blog/2015/10/23/midlay-not-overlay.html">&lt;p&gt;Design exploration of the middle laying image for a shop theme.
+The idea is that a overlay blocks navigation and the middle laying one does not.
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/musca/midlay/master/assets/middlay-v4.gif&quot; alt=&quot;Middlay&quot; /&gt;&lt;/p&gt;</content><category term="design" /><category term="images" /><category term="midlay" /><summary>Design exploration of the middle laying image for a shop theme.
+The idea is that a overlay blocks navigation and the middle laying one does not.</summary></entry><entry><title>HTML5 base64 test video</title><link href="http://musca.se/blog/2015/04/18/html5-base64-test-video.html" rel="alternate" type="text/html" title="HTML5 base64 test video" /><published>2015-04-18T15:37:01+02:00</published><updated>2015-04-18T15:37:01+02:00</updated><id>http://musca.se/blog/2015/04/18/html5-base64-test-video</id><content type="html" xml:base="http://musca.se/blog/2015/04/18/html5-base64-test-video.html">&lt;p&gt;I needed a small base64 video file to check for HTML 5 video tag support in the browser. This is what I came up with.
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;mp4 version:
+&lt;code&gt;
+data:video/mp4;base64,AAAAGGZ0eXBtcDQyAAAAAG1wNDJpc29tAAAC3W1vb3YAAABsbXZoZAAAAADPawGIz2sBiAABX5AAAAAAAAEAAAEAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAYaW9kcwAAAAAQgICABwBP////f/8AAAHidHJhawAAAFx0a2hkAAAAAc9rAYjPawGIAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAFAAAAAtAAAAAABfm1kaWEAAAAgbWRoZAAAAADPawGIz2sBiAABX5AAAAAAVcQAAAAAACFoZGxyAAAAAAAAAAB2aWRlAAAAAAAAAAAAAAAAAAAAATVtaW5mAAAAFHZtaGQAAAABAAAAAAAAAAAAAAAkZGluZgAAABxkcmVmAAAAAAAAAAEAAAAMdXJsIAAAAAEAAAD1c3RibAAAAKlzdHNkAAAAAAAAAAEAAACZYXZjMQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAFAALQASAAAAEgAAAAAAAAAAQ5KVlQvQVZDIENvZGluZwAAAAAAAAAAAAAAAAAAAAAAABj//wAAADFhdmNDAULAC//hABpnQsAL2QFBn55qAgICgAAAAwCAAV+QB4oVJAEABGjLjLIAAAASY29scm5jbGMAAQABAAEAAAAQc3R0cwAAAAAAAAAAAAAAFHN0c3oAAAAA/////wAAAAAAAAAQc3RzYwAAAAAAAAAAAAAAEHN0Y28AAAAAAAAAAAAAAG91ZHRhAAAAZ21ldGEAAAAAAAAAIWhkbHIAAAAAAAAAAG1kaXIAAAAAAAAAAAAAAAAAAAAAOmlsc3QAAAAyqXRvbwAAACpkYXRhAAAAAQAAAABIYW5kQnJha2UgMC45LjkgMjAxMzA1MTgwMAAAAAhtZGF0
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;webm version:
+&lt;code&gt;
+data:video/webm;base64,GkXfowEAAAAAAAAfQoaBAUL3gQFC8oEEQvOBCEKChHdlYm1Ch4EEQoWBAhhTgGcBAAAAAAAEJxFNm3RALE27i1OrhBVJqWZTrIHfTbuMU6uEFlSua1OsggEwTbuMU6uEHFO7a1OsggQK7AEAAAAAAACkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVSalmAQAAAAAAAEUq17GDD0JATYCNTGF2ZjU1LjMzLjEwMFdBjUxhdmY1NS4zMy4xMDBzpJDJLYi6DaYf/kZJAZ4lyHA6RImIQHkAAAAAAAAWVK5rAQAAAAAAADyuAQAAAAAAADPXgQFzxYEBnIEAIrWcg3VuZIaFVl9WUDiDgQEj44OEC+vCAOABAAAAAAAAB7CCAUC6gbQfQ7Z1AQAAAAAAAobngQCjQgyBAACAMCAAnQEqQAG0AA1HCIWFiIWEiD+Du4NReSdygUXlxka78yuQ5Y3YhZDtTacNrnF+wWgFAdOuXAOjzoo0Fev0n2ty9tm9klhDSO4NXSwAZIgJwlFgIucq4NXiUY9o4XsZ21RQu4+tYmauFhkqoRYogJk8ZYB3Z3INL4yOlS4IrUR3/wYCtBthFJyy7uKol7pM0LacBIGBlw46lSoxvCmaV+MbQvlLjNyTjNUbmI5o7x4RvjrMt6xICu/kZ41BFXfudQcJ5dks/ZNhZSgoz7BfCf36aCeIIRVZ6AWVKnI397mzAgwjJzNG9uPbgHbbCouT0LUEvm34wVEot6kg3sjni75JQS+UriQHw7SA+Z4lVUzsdurPAEuNa+MyR00zPtN1d8rBB9NR3AyctHjFC8HtX4wmkmh8OZrd9g+GjRWl2allen/6vhmSwK+j6II8552q9vQppVv3ZGibaDTFIjYNP6uZwtNhYxwVzjJnrMCRMq15xny2JoGO/zML8PpMT9octgKlos/sFgtGKc+DSVvSVmwe0vUWU1u3StCj2z5kUbZxtkgNYDcVyX+wNZRMVC9J7TgS5Chmdyvjr9ZgD131Sh3dmEtn1KBeMjehlzs5VLDaoHo0fPdjjHS+YN7Xkwh9qrCr1rfWxb2LdcO5DY4CHzR1lZsteKg9M6deYkRDj1aD7REw2haQAKPygQDIAJEMADwR/AAYABjqV/QAdvWfy/vghMy7lfz2D4cfQPB7J+l/vHniTxnBMh0DMsUkvvEbXrhAwhyKcdQI1HEQhN9qV/4356mrXYHs3D6ut/cvcw4f2aSoqKceDmaanCp5jSu6YzqI0gClfnxcWrgAHFO7awEAAAAAAAARu4+zgQC3iveBAfGCAXjwgQM
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If you can make the webm version smaller please make a comment.&lt;/p&gt;
+
+&lt;p&gt;Video credit:
+&lt;a href=&quot;http://www.beachfrontbroll.com/2011/12/1-clip-perks-you-up.html&quot;&gt;Coffee Cup by Jeffrey Beach&lt;/a&gt;&lt;/p&gt;</content><category term="HTML5" /><category term="video" /><category term="base64" /><summary>I needed a small base64 video file to check for HTML 5 video tag support in the browser. This is what I came up with.</summary></entry><entry><title>3D Rotating image with CSS3</title><link href="http://musca.se/blog/2014/07/20/3D-rotating-image-css3.html" rel="alternate" type="text/html" title="3D Rotating image with CSS3" /><published>2014-07-20T15:15:00+02:00</published><updated>2014-07-20T15:15:00+02:00</updated><id>http://musca.se/blog/2014/07/20/3D-rotating-image-css3</id><content type="html" xml:base="http://musca.se/blog/2014/07/20/3D-rotating-image-css3.html">&lt;!--more--&gt;
+&lt;style&gt;
+	.header-image {
+		width: 140px;
+		height: 140px;
+		margin: 2em auto;
+		display: block;
+	  -webkit-animation: loading 20s linear infinite;
+	  	 -moz-animation: loading 20s linear infinite;
+	  				animation: loading 20s linear infinite;
+	}
+
+	@-webkit-keyframes loading {
+	  from {
+	    -webkit-transform: perspective(800px) rotateY(0deg); }
+
+	  to {
+	    -webkit-transform: perspective(800px) rotateY(-360deg); }
+	}
+	@-moz-keyframes loading {
+	  from {
+	    -moz-transform: perspective(400px) rotateY(0deg); }
+
+	  to {
+	    -moz-transform: perspective(400px) rotateY(-360deg); }
+	}
+	@keyframes loading {
+	  from {
+	    transform: perspective(400px) rotateY(0deg); }
+
+	  to {
+	    transform: perspective(400px) rotateY(-360deg); }
+	}
+&lt;/style&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/dist/img/logo.svg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;logo&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+	.logo {
+      animation: loading 20s linear infinite;
+	}
+
+	@keyframes loading {
+      from { 
+        transform: perspective(400px) rotateY(0deg); 
+      }
+      to { 
+        transform: perspective(400px) rotateY(-360deg); 
+      }
+	}&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><category term="3D" /><category term="Rotating" /><category term="image" /><category term="CSS3" /><summary></summary></entry></feed>

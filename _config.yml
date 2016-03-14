@@ -1,0 +1,25 @@
+name: musca.se
+repository: musca/musca.github.com
+gems:
+  - jekyll-feed
+  - jekyll-github-metadata
+markdown: kramdown
+highlighter: rouge
+description: "This is where I keep a blog about my github projects, web design & development."
+url: http://musca.se
+excerpt_separator: <!--more-->
+exclude: [
+  "CNAME",
+  "src", 
+  "node_modules", 
+  "gulpfile.js", 
+  "package.json", 
+  "Gemfile",
+  "Gemfile.lock",
+  "README.md",
+  "npm-debug.log"
+]
+production_url: http://musca.se
+collections:
+  projects:
+    output: true

@@ -1,0 +1,91 @@
+---
+layout: default
+title: Web design and development
+css: main
+js: main
+---
+<section class="intro"> 
+  <header class="content-wrapper header-content align-left">   
+    <h1 class="align-left align-middle">
+      <span class="greeting"></span> my name is Oskar I am a Swedish freelancing web designer and frontend developer.
+      <br>
+    </h1>
+    
+    <div class="iPad align-middle">
+      <svg width="224" height="315" viewBox="0 0 224 315" xmlns="http://www.w3.org/2000/svg"><title>Rectangle 32 Copy</title><path d="M0 12C0 5.372 5.37 0 12.004 0h199.992C218.626 0 224 5.368 224 12v291c0 6.628-5.37 12-12.004 12H12.004C5.374 315 0 309.632 0 303V12zm14 17h196v253H14V29z" fill="#ccc" fill-rule="evenodd"/></svg>
+      
+    </div> 
+    <span class="middler"></span>  
+  </header>
+</section>
+<section id="learn-more" class="align-left content-wrapper more-padding-top more-padding-bottom">
+  <h2>
+      I am currently working with <a href="http://restfuldesign.com">restfuldesign.com</a> on projects ranging from landing pages to e-commerce websites. If you'd like to work with me, drop me an <a href="">hello@musca.se</a>
+  </h2>
+</section>
+<section class="projects align-center">
+  {% assign projects = site.projects | sort: 'listing-priority' %}
+	{% for project in projects %}
+  <div class="project-wrapper more-padding-top more-padding-bottom" style="background-color: #{{ project.BGcolor}};">
+		<h3 class="padding-top">{{ project.title }}</h3>
+    <p class="leading padding-bottom">{{ project.description }}</p>
+    <a href="{{ url.url }}">{{ url.url }}</a>
+    {{ project.content }}
+    <p>{{ project.service }}</p>
+  </div>
+  {% endfor %}
+</section>
+<section class="blog">
+  {% assign post = site.posts.first %}
+  <div class="post-wrapper more-padding-top more-padding-bottom item{{ counter }} {{ post.color }}" style="{% if post.bgColor %}background-color: #{{ post.bgColor }}; {% endif %}{% if post.bgImg %}background-image:url(/dist/img/{{ post.bgImg }});{% endif %}">
+    <div class="grid content-wrapper">
+      <div class="unit half">
+        <h2>latest from the <a href="/blog">blog</a></h2>
+        <a href="{{ post.url }}">
+          <h2 class="align-left padding-right no-padding">{{ post.title }}</h2>
+        </a>
+          <p>{{ post.excerpt }}</p>
+        <a href="{{ post.url }}">
+          <svg class="margin-top" width="441" height="393" viewBox="0 0 441 393" xmlns="http://www.w3.org/2000/svg"><title>read more arrow</title><path d="M331.87 226H0v-56h334.902L204.767 39.865 244.365.267l195.868 195.868-.114.115.347.348-195.87 195.87-39.597-39.6L331.87 226z" fill="#444" fill-rule="evenodd"/></svg>
+        </a>
+      </div>
+      <div class="unit half">
+        {% if post.headerImg %}
+        <img src="/dist/img/{{ post.headerImg }}" width="256" class="header-image more-margin-bottom float-center">
+        {% endif %}
+        <!-- {{ post.excerpt }} -->
+      </div>
+    </div> 
+  </div>
+</section>
+<section class="">
+  <!-- <img src="{{ site.github.owner_gravatar_url }}"> -->
+  <div class="grid">
+    <div class="unit one-fifth" style="min-height:320px">
+      <img class="float-center margin-top" alt="octocat" src="/dist/img/octocat.svg">
+    </div>
+    {% assign counter = 1 %}
+    {% assign repos = site.github.public_repositories | sort: 'created_at' %}
+    {% for repository in repos reversed %}
+    <div class="unit one-fifth">    
+      <div class="project-{{ counter }}" style="min-height: 320px; padding: 15px; position: relative;">
+        <!-- <div class="{{ repository.language }} " style="position: absolute; left: 0px; top: 0px; width:100%; height: 5px;"></div> -->
+        {{ repository.language }}
+        <h3>{{ repository.name }}</h3>
+        <p>{{ repository.description }}</p>
+        <!-- <div class="wrap">
+          <iframe src="{{ repository.homepage }}" frameborder="0" class="frame"></iframe>
+        </div>    -->   
+        <a href="{{ repository.html_url }}" style="position: absolute; bottom: 20px;">View project {{ repository.has_pages }}</a>
+      </div> 
+    </div>
+    {% assign counter = counter | plus: 1 %}
+    {% endfor %}
+  </div>
+</section>
+
+  
+<script>
+  // var grid = document.getElementById(grid);
+ //  salvattore.register_grid(grid);
+</script>

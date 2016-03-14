@@ -1,0 +1,80 @@
+.github {
+  img {
+    width: 80%;
+  }
+  ul {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+  //  font-family: helvetica neue;
+  }
+  li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    span.language {
+      color: $grey;
+    }
+  }
+  li:last-child {
+    border-width: 0px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+.gitter {
+  width: 200px;
+  margin-top: 4em;
+}
+.wrap {
+    width: 100%;
+    height: 192px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.frame {
+    width: 1024px;
+    height: 786px;
+    border: 0;
+
+    -ms-transform: scale(0.25);
+    -moz-transform: scale(0.25);
+    -o-transform: scale(0.25);
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+$githubBGcolor: aliceblue;
+.project-1 {
+  background-color: darken($githubBGcolor, 0%);
+}
+.project-2 {
+  background-color: darken($githubBGcolor, 1%);
+}
+.project-3 {
+  background-color: darken($githubBGcolor, 3%);
+}
+.project-4 {
+  background-color: darken($githubBGcolor, 4%);
+}
+.project-5 {
+  background-color: darken($githubBGcolor, 5%);
+}
+.project-6 {
+  background-color: darken($githubBGcolor, 6%);
+}
+.project-7 {
+  background-color: darken($githubBGcolor, 7%);
+}
+.project-8 {
+  background-color: darken($githubBGcolor, 8%);
+}
+.project-9 {
+  background-color: darken($githubBGcolor, 9%);
+}

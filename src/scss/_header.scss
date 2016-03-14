@@ -1,0 +1,176 @@
+.header {
+  &.content-wrapper {
+    position: absolute;
+    width: 100% !important;
+    max-width: initial;
+    padding-top: $padding;
+    height: 42px;   
+    z-index: 4; 
+  }
+  nav {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+    height: inherit;
+    .logo, 
+    aside,
+    .open-side-menu {
+      position: absolute;
+    }
+    .logo {
+      left: 0;
+      svg {
+        width: 24px;
+      }
+    }
+    aside {
+      right: 48px;
+      line-height: 24px;
+      font-size: 1.5em;
+      color: $grey;
+      text-transform: uppercase;
+    }
+    .open-side-menu {
+      right: 0;
+      top: 0;
+      svg {
+        transition: width .3s;
+      }  
+    }
+    a {
+      height: 24px;
+      svg {
+        height: inherit;
+        > path {
+          fill: $logo-color;
+        }    
+      }
+    }  
+  }
+}
+.open-side-menu:hover,
+.side-menu-showing .open-side-menu {
+  svg {
+    width: 39px !important;
+  }
+} 
+.white {
+  .logo,
+  .open-side-menu {
+    svg {
+      > path {
+        fill: $white;
+      }    
+    }
+  }
+}
+.black {
+  .logo,
+  .open-side-menu {
+    svg {
+      > path {
+        fill: $black;
+      }    
+    }
+  }
+}
+.intro {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  border: 10px solid #FAFAFA;
+  background-color: #FDEC62;
+  header {
+    height: 100%;
+    position: relative;
+    h1 {
+      margin: 10px 0 20px;
+      padding: 10px;
+      width: 100%;
+      line-height: 1.2;
+      color: #333;
+      font-size: 2.1em;
+      a {
+        font-size: 18px;
+        color: #8C92BF;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .iPad {
+      width: 100%;
+      text-align: center;
+      svg {
+        fill: #fafafa;
+        margin-top: -4em;
+        width: 160px;
+        height: auto;
+        path {
+          fill: #fafafa;
+        }
+      }
+    }
+  }
+}
+#loading .logo{
+  z-index: 3;
+  opacity: 1 !important;
+  animation: loading 2s linear infinite;
+}
+@include at-query ($min, $ip6) {
+  .intro {
+    border-width: 20px;
+    header {
+      h1 {
+        font-size: 2.6em;
+        line-height: 1.2;
+        color: #333;
+        a {
+          font-size: 21px;
+          color: #8C92BF;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+@include at-query ($min, $medium) {
+  .intro {
+    border-width: 20px;
+    header {
+      h1 {
+        font-size: 3.6em;
+        max-width: 61%;
+        line-height: 1.2;
+        color: #333;
+        a {
+          font-size: 21px;
+          color: #8C92BF;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .iPad {
+        width: 38%;
+        text-align: center;
+        svg {
+          margin-top: 0;
+          fill: #fafafa;
+          width: 320px;
+          height: auto;
+          path {
+            fill: #fafafa;
+          }
+        }
+      }
+    }
+  }
+}

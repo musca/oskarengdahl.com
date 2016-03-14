@@ -1,0 +1,68 @@
+/*
+* Media Queries 
+*/
+
+@media screen and (min-width: 1024px) {
+  .content-wrapper {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .video-container {
+    display: none;
+  }
+  .header-wrapper img {
+    width: 32px !important;
+  }
+  #content,
+  .blog .half,
+  .blog .content-wrapper {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 532px) {
+  .flickr li,
+  .flickr a {
+    width: 153.3px;
+    height: 153.3px;
+  }
+  #what-ppl-say h3 {
+    left: 22px;
+  }
+}
+
+@media screen and (max-width: 480px){
+	#grid[data-columns]::before {
+		content: '1 .column.size-1of1';
+	}
+  .grid .w-1-2 {
+    width: 100%;
+    padding: 0;
+  }
+  .grid .unit:first-child,
+  .grid .unit:last-child {
+    padding: 0;
+  }
+  .content-wrapper {
+    width: 94%;
+  }
+  .flickr li {
+    width: 33.3% !important;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	#grid[data-columns]::before {
+		content: '2 .column.size-1of2';
+	}
+}
+@media screen and (min-width: 769px) {
+	#grid[data-columns]::before {
+		content: '3 .column.size-1of3';
+	}
+}
+
+.size-1of1 { width: 100%; }
+.size-1of2 { width: 50%; }
+.size-1of3 { width: 33.333%; }

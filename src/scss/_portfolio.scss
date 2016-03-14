@@ -1,0 +1,18 @@
+.projects {
+  img {
+    width: 90% !important;
+    max-width: 480px;
+    margin: 20px;
+  }
+  h3 {
+    font-size: 4.8em;
+  }
+}
+.project-wrapper {
+  margin: 10px;
+}
+@include at-query ($min, $medium) {
+  .project-wrapper {
+    margin: 20px;
+  }
+}
