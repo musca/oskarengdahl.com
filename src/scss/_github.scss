@@ -35,7 +35,7 @@
     .project-#{$i} {
         background-color: darken($githubBGcolor, $classID);
     }
-    $classID: $classID + 2;
+    $classID: $classID + 1.68;
   }
   
 
