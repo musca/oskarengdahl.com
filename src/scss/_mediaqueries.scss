@@ -2,12 +2,15 @@
 * Media Queries 
 */
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .content-wrapper {
     width: 90%;
   }
+  .unit.one-fifth {
+    width: 33%;
+  }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) { 
   .video-container {
     display: none;
   }
@@ -21,6 +24,9 @@
   }
 }
 @media screen and (max-width: 532px) {
+  .unit.one-fifth {
+    width: 50%;
+  }
   .flickr li,
   .flickr a {
     width: 153.3px;
@@ -41,7 +47,7 @@
   }
   .grid .unit:first-child,
   .grid .unit:last-child {
-    padding: 0;
+//    padding: 0;
   }
   .content-wrapper {
     width: 94%;
