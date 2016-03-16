@@ -9,8 +9,7 @@ $(document).ready(function() {
   var header = document.querySelector(".intro");
   var video = document.querySelector("video");
 
-  if (header) {
-    
+  if (header) {   
     setHeaderHeight();
     // alignContent();
 
@@ -44,9 +43,6 @@ $(document).ready(function() {
         setHeaderHeight();
       }
     }, 1000);
-  }
-  
-  
-  o("body").addClass('loaded');
-  
+  } 
+  o("body").addClass('loaded');  
 });

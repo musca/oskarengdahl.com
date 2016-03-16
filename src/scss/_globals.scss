@@ -75,7 +75,6 @@ code {
   width: 90%;
   max-width: 1111px;
 }
-
 /* margins */
 .margin-top         { margin-top: $margin; }
 .margin-right       { margin-right: $margin; } 
@@ -183,4 +182,12 @@ a[disabled], .disabled {
 .HTML {
   background-color: #e44b23;
   color: #fff;
+}
+.b-lazy {
+  transition: opacity 500ms ease-in-out;
+  max-width: 100%;
+  opacity: 0;
+}
+.b-lazy.b-loaded {
+  opacity: 1;
 }
