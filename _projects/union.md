@@ -7,6 +7,6 @@ url: www.rolandpersson.com
 BGcolor: f2f2f2
 ---
 
-![union](http://localhost:3000/dist/img/ipad.jpg)
-![union](http://localhost:3000/dist/img/ipad.jpg)
+![union](/dist/img/rp-iphone.png)
+![union](/dist/img/roland-persson-ipad.png)
 <!-- ![union](http://localhost:3000/dist/img/roland-persson-ipad-white.jpg) -->
