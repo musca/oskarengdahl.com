@@ -1,4 +1,23 @@
 .github {
+  .unit {
+    position: relative;
+  }
+  .leading {
+    padding: 20px;
+    h3 {
+      line-height: 1;
+    }
+    small {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+  .octocat {
+    position: absolute;
+    bottom: -10px;
+    left:  10px;
+    width: 80px;
+  }
   .project-wrapper {
     font-size: 100%;
     display: block;
