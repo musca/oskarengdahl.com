@@ -7,7 +7,7 @@ js: main
 <section class="intro"> 
   <header class="content-wrapper header-content align-left">
     <h1 class="align-left align-middle">
-      <span class="greeting">Hello,</span> my name is Oskar I am from Sweden and design and write code for the Internet.
+      <span class="greeting">Hello,</span> my name is Oskar I am from Sweden and design and write code for the Web.
     </h1>  
     <div class="iPad align-middle">
       <img src="/dist/img/rp-iphone.png" alt="">
@@ -15,22 +15,25 @@ js: main
     <span class="middler"></span>  
   </header>
 </section>
-<section id="learn-more" class="align-left content-wrapper more-padding-top more-padding-bottom">
-  <h2>
-      I am currently working with <a href="http://restfuldesign.com">restfuldesign.com</a> on projects ranging from landing pages to e-commerce websites. If you'd like to work with me, drop me an <a href="">hello@musca.se</a>
+<section class="learn-more half float-center align-left content-wrapper more-padding-top more-padding-bottom">
+  <h2 class="h3">
+      I am currently working with <a href="http://restfuldesign.com">restfuldesign.com</a> on projects ranging from landing pages to e-commerce websites. If you'd like to work with me, drop me an <a href="">email</a>
   </h2>
 </section>
 <section class="projects align-center">
-  {% assign projects = site.projects | sort: 'listing-priority' %}
-  {% for project in projects %}
-  <div class="project-wrapper more-padding-top more-padding-bottom" style="background-color: #{{ project.BGcolor}};">
-	<h3 class="padding-top">{{ project.title }}</h3>
-    <p class="leading padding-bottom">{{ project.description }}</p>
-    <a href="{{ url.url }}">{{ url.url }}</a>
-    {{ project.content }}
-    <p>{{ project.service }}</p>
-  </div>
+  {% assign projects = site.projects | sort: 'date' %}
+  <div class="grid">
+  {% for project in projects reversed %}  
+    <div class="half">
+      <div class="projects-wrapper">
+        <a href="{{ project.project-url }}" style="background-color: {{ project.BGcolor }};">
+          <img src="{{ project.image }}" alt="">
+          <span class="middler"></span>
+        </a>
+      </div>     
+    </div> 
   {% endfor %}
+  </div>
 </section>
 <section class="blog">
   {% assign post = site.posts.first %}

@@ -1,12 +1,12 @@
 name: musca.se
-repository: musca/musca.github.com
+repository: 'musca/musca.github.com'
 gems:
   - jekyll-feed
   - jekyll-github-metadata
 markdown: kramdown
 highlighter: rouge
-description: "This is where I keep a blog about my github projects, web design & development."
-url: http://musca.se
+description: "Oskar Engdahl´s home on the Web"
+url: 'http://oskarengdahl.com'
 excerpt_separator: <!--more-->
 exclude: [
   "CNAME",
@@ -19,7 +19,14 @@ exclude: [
   "README.md",
   "npm-debug.log"
 ]
-production_url: http://musca.se
+production_url: 'http://oskarengdahl.com'
 collections:
    projects:
      output: true
+defaults:
+ - scope:
+     type: projects
+   values:
+     layout: project
+     css: main
+     js: main
