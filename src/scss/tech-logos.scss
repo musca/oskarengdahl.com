@@ -1,0 +1,9 @@
+.tech-logos .unit {
+  height: 90px; 
+  margin: 60px 0;
+  img {
+    height: 100%; 
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+}

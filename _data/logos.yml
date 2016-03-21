@@ -1,0 +1,12 @@
+- name: sketch
+  img: '/dist/img/logos/sketch.png'
+- name: shopify
+  img: '/dist/img/logos/shopify.svg'
+- name: gulp
+  img: '/dist/img/logos/gulp.svg'
+- name: sass
+  img: '/dist/img/logos/sass.svg'
+- name: github
+  img: '/dist/img/logos/github.svg'
+- name: jekyll
+  img: '/dist/img/logos/jekyll.svg'

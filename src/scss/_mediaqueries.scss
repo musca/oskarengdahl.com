@@ -37,14 +37,38 @@
   }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
+  .padding-top,
+  .more-padding-top { 
+    padding-top: 30px !important; 
+  }
+  
 	#grid[data-columns]::before {
 		content: '1 .column.size-1of1';
 	}
-  .grid .w-1-2 {
-    width: 100%;
+  .post-wrapper,
+  .header-wrapper {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+  .grid {
     padding: 0;
   }
+  .github .unit.one-fifth {
+    width: 100%;
+  }
+  .projects {
+    .half {
+      padding-bottom: 100% !important;
+    }
+  }
+  .half,
+  .grid .half,
+  .grid .w-1-2,
+  .golden-large {
+    width: 100%;
+  }
+  
   .grid .unit:first-child,
   .grid .unit:last-child {
 //    padding: 0;

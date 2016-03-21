@@ -7,7 +7,7 @@ js: main
 <section class="intro"> 
   <header class="content-wrapper header-content align-left">
     <h1 class="align-left align-middle">
-      <span class="greeting">Hello,</span> my name is Oskar I am from Sweden and design and write code for the Web.
+      <span class="greeting">Hello,</span> I am Oskar from Sweden. I design and write code for the Web.
     </h1>  
     <div class="iPad align-middle">
       <img src="/dist/img/rp-iphone.png" alt="">
@@ -15,7 +15,7 @@ js: main
     <span class="middler"></span>  
   </header>
 </section>
-<section class="learn-more half float-center align-left content-wrapper more-padding-top more-padding-bottom">
+<section class="learn-more golden-large float-center align-left content-wrapper more-padding-top more-padding-bottom">
   <h2 class="h3">
       I am currently working with <a href="http://restfuldesign.com">restfuldesign.com</a> on projects ranging from landing pages to e-commerce websites. If you'd like to work with me, drop me an <a href="">email</a>
   </h2>
@@ -34,6 +34,16 @@ js: main
     </div> 
   {% endfor %}
   </div>
+</section>
+<section class="tech-logos more-padding-top more-padding-bottom">
+  <div class="grid">
+    <h2 class="align-center padding-bottom">Tools I work with at the moment</h2>
+    {% for logo in site.data.logos %}
+    <div class="unit one-fifth align-center">
+      <img src="{{ logo.img }}" class="align-middle" alt="{{ logo.name }}" style="">
+    </div>  
+    {% endfor %}
+  </div>  
 </section>
 <section class="blog">
   {% assign post = site.posts.first %}
@@ -63,7 +73,7 @@ js: main
     <div class="unit one-fifth leading" style="min-height:320px">    
       <h3>Github</h3>
       projects and random stuff
-      <img class="octocat" alt="octocat" src="/dist/img/octocat.svg">
+      <img class="octocat" alt="octocat" src="/dist/img/logos/octocat.svg">
     </div>
     {% assign counter = 1 %}
     {% assign repos = site.github.public_repositories | sort: 'created_at' | reverse %}
