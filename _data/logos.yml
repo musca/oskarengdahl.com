@@ -10,3 +10,5 @@
   img: '/dist/img/logos/github.svg'
 - name: jekyll
   img: '/dist/img/logos/jekyll.svg'
+- name: terminal
+  img: '/dist/img/logos/terminal.svg'
