@@ -1,4 +1,3 @@
-//= require includes/*.js
 //= require vendor/*.js
 'use strict';
 var o = $;
@@ -8,6 +7,20 @@ $(document).ready(function() {
   var bLazy = new Blazy();  
   var header = document.querySelector(".intro");
   var video = document.querySelector("video");
+  
+  var greeting = document.querySelector(".greeting"),
+      now = new Date(),
+      h = now.getHours();
+  // Show Greeting
+  if (h >= 0 && h < 4) {
+    greeting.innerHTML = 'Greetings night owl,';
+  } else if (h >= 4 && h < 12) {
+    greeting.innerHTML = 'Good morning,';
+  } else if (h >= 12 && h < 18) {
+    greeting.innerHTML = 'Good afternoon,';
+  } else {
+    greeting.innerHTML = 'Good evening,';
+  }
 
   if (header) {   
     setHeaderHeight();
@@ -18,7 +31,7 @@ $(document).ready(function() {
     }
   
     function pauseVideo() {
-      if (verge.inViewport(video, -verge.viewportH() / 2)) {
+      if (verge.inViewport(video, - verge.viewportH() / 2)) {
         if (video.paused) video.play();    
       } else {
         video.pause();
@@ -42,7 +55,11 @@ $(document).ready(function() {
       if (didResize) {
         setHeaderHeight();
       }
-    }, 1000);
+    }, 100);
   } 
-  o("body").addClass('loaded');  
+  o("body").addClass('loaded');
+  document.documentElement.removeAttribute("id");
+  o("a").on("click", function(e) {
+    o("html").attr("id","loading");
+  });
 });

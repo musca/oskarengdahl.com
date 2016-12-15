@@ -12,7 +12,7 @@ html {
 body {
   font-family: $prim-font-stack;
   line-height: 1.43;
-  transition: opacity 1s linear;
+  transition: opacity .9s linear;
   -webkit-font-smoothing: antialiased;
   background-color: #fefefe;
   font-weight: 400;
@@ -44,12 +44,12 @@ h3,
 }
 h4,
 .h4 {
-  font-size: 2.1em !important;
+  font-size: 2.1em;
 }
 p {
   font-size: $p-font-size;
-  font-weight: 200;
-  margin-bottom: 1em;
+//  font-weight: 200;
+  margin: 1em auto !important;
   line-height: 30px;
   color: #222;
   word-spacing:  -.1em;;
@@ -126,7 +126,7 @@ code {
 
 /* Text */
 .justify      { text-align: justify; }
-.align-center { text-align: center; }
+.align-center { text-align: center !important; }
 .align-left   { text-align: left; }
 .align-right  { text-align: right; }
 .align-middle {
@@ -188,8 +188,8 @@ a[disabled], .disabled {
 }
 .b-lazy {
   transition: opacity 500ms ease-in-out;
-  max-width: 100%;
-  opacity: 0;
+   max-width: 100%;
+     opacity: 0;
 }
 .b-lazy.b-loaded {
   opacity: 1;
