@@ -2,6 +2,8 @@
   img: '/dist/img/logos/sketch.png'
 - name: shopify
   img: '/dist/img/logos/shopify.svg'
+- name: panda
+  img: '/dist/img/logos/panda.svg'
 - name: gulp
   img: '/dist/img/logos/gulp.svg'
 - name: sass
