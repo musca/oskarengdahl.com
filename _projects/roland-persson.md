@@ -10,6 +10,7 @@ services:
   - JS code
 project-url: 'http://www.rolandpersson.com'
 image: /dist/img/rp-iphone.png
+color: '#FFF'
 BGcolor: '#929b9a'
 ---
 
