@@ -1,7 +1,10 @@
 .github-new {
 	@include full;
 	> div {
-		@include span(2);
+		@include span(5 of 10);
+		@include breakpoint($medium){
+			@include span(2 of 10);
+	  }	
 		margin-bottom: gutter() * 2;
 	}
   .leading {

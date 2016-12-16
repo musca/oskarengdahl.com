@@ -2,7 +2,10 @@
 	@include full;
 	text-align: center;
 	> div {
-		@include span(2 of 10);
+		@include span(5 of 10);
+		@include breakpoint($medium){
+			@include span(2 of 10);
+	  }			
     height: 90px;
 		margin-top: 60px;
     margin-bottom: 60px;
