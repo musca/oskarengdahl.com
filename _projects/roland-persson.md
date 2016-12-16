@@ -10,7 +10,7 @@ services:
   - JS code
 project-url: 'http://www.rolandpersson.com'
 image: /dist/img/rp-iphone.png
-BGcolor: '#FAFAFA'
+BGcolor: '#929b9a'
 ---
 
 You see, in this world there's two kinds of people, my friend: those with loaded guns and those who dig. you dig. your entrance was good, his was better. this is the ak-47 assault rifle, the preferred weapon of your enemy; and it makes a distinctive sound when fired at you, so remember it. dyin' ain't much of a livin', boy. kinda hot in these rhinos. excuse me, i'd like to ass you a few questions.
