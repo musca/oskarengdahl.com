@@ -4,89 +4,62 @@ title: Web design and development
 css: main
 js: main
 ---
-<section class="intro"> 
-  <header class="content-wrapper header-content align-left">
-    <h1 class="align-left align-middle">
-      <span class="greeting">Hello,</span> I am Oskar from Sweden. I design and write code for the Web.
-    </h1>  
-    <div class="iPad align-middle">
-      <img src="/dist/img/rp-iphone.png" alt="">
-    </div> 
-    <span class="middler"></span>  
-  </header>
-</section>
+<header class="content-wrapper header-content align-left">
+	  <h1 class="align-left">
+	    <span class="greeting">Hello</span>! I do Scandinavian design and code for the Web.
+	  </h1>
+		<span class="middler"></span>
+</header>
 <section class="learn-more golden-large float-center align-left content-wrapper more-padding-top more-padding-bottom">
   <h2 class="h3">
       I am currently working with <a href="http://restfuldesign.com">restfuldesign.com</a> on projects ranging from landing pages to e-commerce websites. If you'd like to work with me, drop me an <a href="">email</a>
   </h2>
 </section>
 <section class="projects align-center">
-  {% assign projects = site.projects | sort: 'date' %}
-  <div class="grid">
+  {% assign projects = site.projects | sort: 'date' %}  
   {% for project in projects reversed %}  
-    <div class="half">
-      <div class="projects-wrapper">
-        <a href="{{ project.project-url }}" style="background-color: {{ project.BGcolor }};">
-          <img src="{{ project.image }}" alt="">
+    <div>
+      <div class="project-wrapper">      
+        <div class="project" style="background-color: {{ project.BGcolor }};">
+          <h4 style="color: {{ project.color }};">
+            {{ project.title }}
+            <br>
+            <small>
+              <a href="{{ project.project-url }}">visit site</a>
+            </small>
+          </h4>
+          <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ project.image }}" alt="">
           <span class="middler"></span>
-        </a>
+        </div>
       </div>     
     </div> 
   {% endfor %}
-  </div>
 </section>
 <section class="tech-logos more-padding-top more-padding-bottom">
-  <div class="grid">
-    <h2 class="align-center padding-bottom">Tools I work with at the moment</h2>
+    <h2>Tools I like working with</h2>
     {% for logo in site.data.logos %}
-    <div class="unit one-fifth align-center">
-      <img src="{{ logo.img }}" class="align-middle" alt="{{ logo.name }}" style="">
+    <div>
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ logo.img }}" class="b-lazy" alt="{{ logo.name }}" title="{{ logo.name }}">
     </div>  
     {% endfor %}
-  </div>  
 </section>
-<section class="blog">
-  {% assign post = site.posts.first %}
-  <div class="post-wrapper more-padding-top more-padding-bottom item{{ counter }} {{ post.color }}" style="{% if post.bgColor %}background-color: #{{ post.bgColor }}; {% endif %}{% if post.bgImg %}background-image:url(/dist/img/{{ post.bgImg }});{% endif %}">
-    <div class="grid content-wrapper">
-      <div class="unit half">
-        <h2>latest from the <a href="/blog">blog</a></h2>
-        <a href="{{ post.url }}">
-          <h2 class="align-left padding-right no-padding">{{ post.title }}</h2>
-        </a>
-          <p>{{ post.excerpt }}</p>
-        <a href="{{ post.url }}">
-          <svg class="margin-top" width="441" height="393" viewBox="0 0 441 393" xmlns="http://www.w3.org/2000/svg"><title>read more arrow</title><path d="M331.87 226H0v-56h334.902L204.767 39.865 244.365.267l195.868 195.868-.114.115.347.348-195.87 195.87-39.597-39.6L331.87 226z" fill="#444" fill-rule="evenodd"/></svg>
-        </a>
-      </div>
-      <div class="unit half">
-        {% if post.headerImg %}
-        <img src="/dist/img/{{ post.headerImg }}" width="256" class="header-image more-margin-bottom float-center">
-        {% endif %}
-        <!-- {{ post.excerpt }} -->
-      </div>
-    </div> 
-  </div>
-</section>
-<section class="github">
-  <div class="grid">
-    <div class="unit one-fifth leading" style="min-height:320px">    
+<section class="github-new">
+    <div class="leading">    
       <h3>Github</h3>
       projects and random stuff
       <img class="octocat" alt="octocat" src="/dist/img/logos/octocat.svg">
     </div>
-    {% assign counter = 1 %}
     {% assign repos = site.github.public_repositories | sort: 'created_at' | reverse %}
     {% for repository in repos limit:9 %}
-    <div class="unit one-fifth">    
-      <a href="{{ repository.html_url }}" class="project-{{ counter }} project-wrapper {% if repository.has_pages %} has-page{% endif %}">
+    <div>    
+      <a href="{{ repository.html_url }}" class="project-{{ forloop.index }} project-wrapper {% if repository.has_pages %} has-page{% endif %}">
         {{ repository.language }}
         <h3>{{ repository.name }}</h3>
         <p>{{ repository.description }}</p>
-        <svg class="margin-top" width="441" height="393" viewBox="0 0 441 393" xmlns="http://www.w3.org/2000/svg"><title>read more arrow</title><path d="M331.87 226H0v-56h334.902L204.767 39.865 244.365.267l195.868 195.868-.114.115.347.348-195.87 195.87-39.597-39.6L331.87 226z" fill="#444" fill-rule="evenodd"/></svg>    
+        <svg class="margin-top" width="441" height="393" viewBox="0 0 441 393" xmlns="http://www.w3.org/2000/svg">
+					<path d="M331.87 226H0v-56h334.902L204.767 39.865 244.365.267l195.868 195.868-.114.115.347.348-195.87 195.87-39.597-39.6L331.87 226z" fill="#444" fill-rule="evenodd"/>
+				</svg>    
       </a>
     </div>
-    {% assign counter = counter | plus: 1 %}
     {% endfor %}
-  </div>
 </section>

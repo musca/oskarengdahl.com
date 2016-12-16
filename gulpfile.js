@@ -64,20 +64,6 @@ gulp.task('sass', function () {
   .pipe(gulp.dest('_site/dist/css'))
   .pipe(browserSync.stream());
 });
-// gulp.task('sass', function () {
-//   return gulp.src('src/scss/*.scss')
-//     .pipe(sass({
-//       includePaths: ['scss'],
-//       onError: browserSync.notify
-//     }))
-//     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-//     .pipe(sourcemaps.init())
-//       .pipe(minifyCSS({keepBreaks:true}))
-//     .pipe(sourcemaps.write('maps'))
-//   .pipe(gulp.dest('dist/css'))
-//   .pipe(gulp.dest('_site/dist/css'))
-//   .pipe(browserSync.reload({stream:true}));
-// });
 
 /**
  * Watch scss files for changes & recompile
@@ -86,7 +72,7 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
   gulp.watch('src/scss/*.scss', ['sass']);
   gulp.watch(['src/js/*.js', 'src/vendor/*.js'], ['scripts']);
-  gulp.watch(['index.html', 'blog/index.html', 'blog/archive/index.html', '_projects/*.md', '_includes/*.html', '_layouts/*.html', '_posts/*', '_data/*'], ['jekyll-rebuild']);
+  gulp.watch(['index.html', 'blog/index.html', 'blog/archive/index.html', '_projects/*.md', '_includes/*.*', '_layouts/*.html', '_posts/*', '_data/*'], ['jekyll-rebuild']);
 });
 
 /**

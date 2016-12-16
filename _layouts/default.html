@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <meta content="Oskar Engdahl a Swedish freelancing web designer and frontend developer." name="description">
     <meta content="musca,design,web,webapp,web app,web application,swedish,simple,useable,functional,landing pages,one page web design, web pages" name="keywords">
     <link rel="apple-touch-icon" sizes="57x57" href="/dist/icons/apple-touch-icon-57x57.png">
@@ -38,26 +38,16 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
       <script src="https://github.com/inexorabletash/polyfill/blob/master/polyfill.min.js"></script>
   	<![endif]-->
-		<noscript><link href="dist/css/main.css" rel="stylesheet"></noscript>
+		<link href="dist/css/main.css" rel="stylesheet">
     <title>Oskar Engdahl | {{ page.title }}</title>
   </head>
   {% assign current = page.url | downcase | split: '/' %}
   <body {% if current[1] == 'blog' %}class='blog {{ page.color }}'{% endif %}>
     <div class="overlay-holder"></div>
-    <header class="header content-wrapper">
-      <nav>
-        <a href="/" class="logo" >
-        </a>
-        <!-- <a href="#menu" class="open-side-menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>menu</title><path d="M39 18v6H0v-6h39zm0-9v6H0V9h39zm0-9v6H0V0h39z" fill="#4A4A4A" fill-rule="evenodd"/></svg>
-        </a> -->
-      </nav>
-    </header>
-    <div id="content">
+    <div class="content">
       {{ content }}
     </div> 
-    <footer class="footer more-margin-top more-padding-top padding-bottom content-wrapper">
-      <aside class="greeting"></aside>
+    <footer>
       {% include footer.html %}
     </footer>
   </body>

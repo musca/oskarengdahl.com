@@ -2,13 +2,20 @@
 layout: default
 ---
 
-<section class="projects align-center">
-  <div class="project-wrapper more-padding-top more-padding-bottom" style="background-color: {{ page.BGcolor}};">
+<section class="projects">
+  <div class="project-wrapper more-padding-bottom align-center" style="background-color: {{ page.BGcolor}};">
+    <h3 class="padding-top">{{ page.title }}</h3>
+    <p class="leading padding-bottom align-center">{{ page.description }}</p>
     <img src="{{ page.image }}" alt="">
-	<h3 class="padding-top">{{ page.title }}</h3>
-    <p class="leading padding-bottom">{{ page.description }}</p>    
+  </div>
+  <div class="project-content padding-top">
+    <!-- <a href="{{ page.project-url }}"></a>  -->
     {{ page.content }}
-    <p>{{ page.service }}</p>
-    <a href="{{ page.project-url }}">{{ page.project-url }}</a>
+    <h4 class="align-left more-padding-top">What I did</h4> 
+    <ul class="align-left more-padding-bottom">
+    {% for service in page.services %}
+    <li>{{ service }}</li>
+    {% endfor %}
+    </ul>    
   </div>
 </section>

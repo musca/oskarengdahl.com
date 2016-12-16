@@ -1,3 +1,65 @@
+.github-new {
+	@include full;
+	> div {
+		@include span(2);
+		margin-bottom: gutter() * 2;
+	}
+  .leading {
+    min-height: 320px;
+		position: relative;
+    h3 {
+      line-height: 1;
+    }
+    small {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+  .octocat {
+    position: absolute;
+    bottom: 0px;
+    left:  10px;
+    width: 80px;
+  }
+  .project-wrapper {
+    font-size: 100%;
+    display: block;
+    min-height: 320px; 
+    margin: 0;
+		padding: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    h3 {
+      color: #111;
+    }
+    p {
+      color: #444;
+    }
+    &:hover svg {
+      left: 20px;
+    }
+    svg {
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      bottom: 20px;
+      left: -100px;
+      transition: left .4s;
+    }
+  }
+
+  $githubBGcolor: aliceblue;
+  $classID: 0;
+
+  @for $i from 1 through 9 {     
+    .project-#{$i} {
+        background-color: darken($githubBGcolor, $classID);
+    }
+    $classID: $classID + 1.68;
+  }
+}
 .github {
   max-width: $max-width;
   margin: 0 auto;
@@ -58,7 +120,5 @@
     }
     $classID: $classID + 1.68;
   }
-  
-
 }
 

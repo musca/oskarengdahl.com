@@ -1,6 +1,18 @@
-.footer {
+footer {
+	@include full;
+	@include span(10 of 10);
+	padding: 0 gutter();
+	margin-bottom: gutter() * 2;
+  clear: both;
+	height: 42px;
   p {
-    margin: 0;
-    line-height: 14px;
+		display: inline-block;
+		float: left;
+    margin: 0 !important;
+    height: 42px
   }
+	svg {
+		display: inline-block;
+		float: right;
+	}
 }

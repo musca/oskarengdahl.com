@@ -14,3 +14,11 @@ Gulp based build system with:
     - gulp-sourcemaps
     - gulp-uglify
     - node-sass
+		
+		
+## Installation
+npm install
+bower install susy --save
+gem install
+bundle install
+bundle exec gulp

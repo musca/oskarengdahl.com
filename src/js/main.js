@@ -13,31 +13,16 @@ $(document).ready(function() {
       h = now.getHours();
   // Show Greeting
   if (h >= 0 && h < 4) {
-    greeting.innerHTML = 'Greetings night owl,';
+    greeting.innerHTML = 'Greetings night owl';
   } else if (h >= 4 && h < 12) {
-    greeting.innerHTML = 'Good morning,';
+    greeting.innerHTML = 'Good morning';
   } else if (h >= 12 && h < 18) {
-    greeting.innerHTML = 'Good afternoon,';
+    greeting.innerHTML = 'Good afternoon';
   } else {
-    greeting.innerHTML = 'Good evening,';
+    greeting.innerHTML = 'Good evening';
   }
 
-  if (header) {   
-    setHeaderHeight();
-    // alignContent();
-
-    function setHeaderHeight() {
-      header.style.height = verge.viewportH()+"px";
-    }
-  
-    function pauseVideo() {
-      if (verge.inViewport(video, - verge.viewportH() / 2)) {
-        if (video.paused) video.play();    
-      } else {
-        video.pause();
-      }
-    }
-  
+  if (header) {     
     window.onscroll = function() {
       didScroll = true;
     };
