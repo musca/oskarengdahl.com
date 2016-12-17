@@ -9,7 +9,6 @@ $(document).ready(function() {
   var greeting = document.querySelector(".greeting"),
       now = new Date(),
       h = now.getHours();
-			s = now.getSeconds();
 	
   // Show Greeting
   if (h >= 0 && h < 4) {
@@ -24,8 +23,6 @@ $(document).ready(function() {
   } else {
     greeting.innerHTML = 'Good evening';
 		header.className = "evening";
-		var minute_as_degree = now.getMinutes() / 60 * 360
-		document.querySelector(".sun-and-moon").style.transform = "rotate(-"+minute_as_degree+"deg)";
   }
 
   if (header) {     
