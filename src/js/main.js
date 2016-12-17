@@ -5,21 +5,27 @@ $(document).ready(function() {
   var didScroll = false;
   var didResize = false;
   var bLazy = new Blazy();  
-  var header = document.querySelector(".intro");
-  var video = document.querySelector("video");
-  
+  var header = document.querySelector(".content > header");
   var greeting = document.querySelector(".greeting"),
       now = new Date(),
       h = now.getHours();
+			s = now.getSeconds();
+	
   // Show Greeting
   if (h >= 0 && h < 4) {
     greeting.innerHTML = 'Greetings night owl';
+		header.className = "night";
   } else if (h >= 4 && h < 12) {
     greeting.innerHTML = 'Good morning';
+		header.className = "morning";
   } else if (h >= 12 && h < 18) {
     greeting.innerHTML = 'Good afternoon';
+		header.className = "afternoon";
   } else {
     greeting.innerHTML = 'Good evening';
+		header.className = "evening";
+		var minute_as_degree = now.getMinutes() / 60 * 360
+		document.querySelector(".sun-and-moon").style.transform = "rotate(-"+minute_as_degree+"deg)";
   }
 
   if (header) {     
@@ -38,7 +44,7 @@ $(document).ready(function() {
         //pauseVideo();
       }
       if (didResize) {
-        setHeaderHeight();
+        
       }
     }, 100);
   } 

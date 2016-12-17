@@ -55,11 +55,11 @@ gulp.task('scripts', function() {
  */
 gulp.task('sass', function () {
  return gulp.src('src/scss/*.scss')
-  .pipe(sourcemaps.init())
+  //.pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
   .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
   .pipe(cleanCSS())
-  .pipe(sourcemaps.write('maps'))  
+  //.pipe(sourcemaps.write('maps'))  
   .pipe(gulp.dest('dist/css'))
   .pipe(gulp.dest('_site/dist/css'))
   .pipe(browserSync.stream());

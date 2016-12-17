@@ -12,7 +12,8 @@ html {
 body {
   font-family: $prim-font-stack;
   line-height: 1.43;
-  transition: opacity .9s linear;
+  transition: opacity 1200ms ease-out,transform 400ms ease-out;
+	//transition: opacity 500ms cubic-bezier(.55,.055,.675,.19), transform 400ms cubic-bezier(.55,.055,.675,.19);
   -webkit-font-smoothing: antialiased;
   background-color: #fefefe;
   font-weight: 400;
@@ -187,10 +188,36 @@ a[disabled], .disabled {
   color: #fff;
 }
 .b-lazy {
-  transition: opacity 500ms ease-in-out;
-   max-width: 100%;
-     opacity: 0;
+	transform: translateY(50px);
+  transition: opacity 500ms, transform 200ms ease-in-out;
+  max-width: 100%;
+  opacity: 0;
 }
 .b-lazy.b-loaded {
+	transform: translateY(50px);
   opacity: 1;
+}
+.desktop-chrome {
+	position: relative;
+	z-index: 2;
+  border-top-width: 20px;
+  border-bottom-width: 2px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: 0px 0px 59px -1px rgba(0,0,0,0.22);
+	background-color: #fff;
+	padding-top: 13px;
+	&:before {
+		content: "•••";
+		position: absolute;
+		display: block;
+		height: 15px;
+		width: 20px;
+		top: -3px;
+		left: -3px;
+		color: inherit;
+		z-index: 3;
+	}
 }

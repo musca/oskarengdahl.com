@@ -4,12 +4,14 @@ title: Web design and development
 css: main
 js: main
 ---
-<header class="content-wrapper header-content align-left">
-	  <h1 class="align-left">
+<header>
+	<div class="header-wrapper">
+	  <h1>
 	    <span class="greeting">Hello</span>!<br>
 			Scandinavian design and code for the Web.
 	  </h1>
 		<span class="middler"></span>
+	</div>	  
 </header>
 <section class="learn-more golden-large float-center align-left content-wrapper more-padding-top more-padding-bottom">
   <h2 class="h3">
@@ -29,7 +31,7 @@ js: main
               <a href="{{ project.project-url }}">visit site</a>
             </small>
           </h4>
-          <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ project.image }}" alt="">
+          <img class="b-lazy {{ project.classes }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ project.image }}" alt="">
           <span class="middler"></span>
         </div>
       </div>     
@@ -37,7 +39,7 @@ js: main
   {% endfor %}
 </section>
 <section class="tech-logos more-padding-top more-padding-bottom">
-    <h2>Tools I like work with.</h2>
+    <h2>Tools I like to use</h2>
     {% for logo in site.data.logos %}
     <div>
       <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ logo.img }}" class="b-lazy" alt="{{ logo.name }}" title="{{ logo.name }}">

@@ -57,8 +57,8 @@
         max-height: 80%;
         margin: 20px;
         vertical-align: middle;
-        transition: transform .4s, opacity 0s;
-        transform: rotateX(0deg);
+        transition: transform .4s, opacity 500ms cubic-bezier(.55,.055,.675,.19);
+        transform: translateY(0);
       }
     }
   }

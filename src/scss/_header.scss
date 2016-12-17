@@ -1,35 +1,36 @@
 .content > header {
-	//@include full;
-	margin: gutter() * 2;
-  height: 95vh;
+	@include full;
+  height: 100vh;
   position: relative;
-  background-color: #f1e05a;
-	background-image: url(/dist/img/rp-iphone.png);
-	background-repeat: no-repeat;
-	background-position: 50% 90%;
-	background-size: 150px;
-	@include breakpoint($medium){
-    background-position: right 23% top 50%;
-  }
-	@include breakpoint($large){
-    background-size: 200px;
-  }
-	> div {
-		float: left;
-		width: 50%;
-		height: 100%;
+  padding-bottom: gutter() * 2;
+		> div {
+		background-color: #f1e05a;
+		margin: gutter() * 2;		
+		@include span(10 of 10);
+		height: 100% - (gutter() * 4);
 		display: inline-block;
 		vertical-align: middle;
-	}
-	
+		background-image: url(/dist/img/rp-iphone.png);
+		background-repeat: no-repeat;
+		background-position: 50% 90%;
+		background-size: 150px;
+		@include breakpoint($medium){
+	    background-position: right 23% top 50%;
+	  }
+		@include breakpoint($large){
+	    background-size: 200px;
+	  }
+	}	
   h1 {
     width: 100%;
     line-height: 1.2;
     color: #333;
 		font-size: 2.4em;
 		vertical-align: top;
-		padding-left: gutter();
+		padding-left: gutter() * 2;
 		display: inline-block;
+		position: relative;
+		z-index: 2;
 		@include breakpoint($medium){
 			margin-top: 0;
 	    font-size: 6.4em;
