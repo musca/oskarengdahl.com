@@ -9,7 +9,8 @@ services:
   - CSS 
   - JS code
 project-url: 'http://www.rolandpersson.com'
-image: /dist/img/rp-iphone.png
+image: /dist/img/rp-iphone-chromeless.png
+classes: 'phone-chrome'
 color: '#FFF'
 BGcolor: '#929b9a'
 ---

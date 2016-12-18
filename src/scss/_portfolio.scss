@@ -43,23 +43,44 @@
         opacity: 1;
         transform: translateY(-33%);
       }
-      &:hover img,
-      &:focus img {
+      &:hover figure,
+      &:focus figure {
         transform: translateY(33%) scale(1.2) perspective(400px) rotateX(0deg);
       }
       a {
         -webkit-tap-highlight-color: rgba(0,0,0,0);
       }
+			figure {
+				vertical-align: middle;
+				display: inline-block;
+				position: relative;
+				margin: 0;
+        max-width: 70%;
+        max-height: 80%;
+				transition: transform .4s;
+				&.video {
+					width: 280px;
+					padding-bottom: 77%;
+					
+				}
+			}
       img {
         width: auto;
         height: auto;
-        max-width: 70%;
-        max-height: 80%;
-        margin: 20px;
-        vertical-align: middle;
-        transition: transform .4s, opacity 500ms cubic-bezier(.55,.055,.675,.19);
+        transition: opacity 500ms cubic-bezier(.55,.055,.675,.19);
         transform: translateY(0);
+				vertical-align: bottom;
       }
+			video {
+				position:	absolute;
+				top: 45px;
+		    left: 5%;
+		    right: 15px;
+		    width: 90%;
+		    height: auto;
+				border: 2px solid red;
+				border-color: inherit;
+			}
     }
   }
   h3 {

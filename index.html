@@ -23,7 +23,7 @@ js: main
   {% for project in projects reversed %}  
     <div>
       <div class="project-wrapper">      
-        <div class="project" style="background-color: {{ project.BGcolor }};">
+        <div class="project" style="background-color: {{ project.BGcolor }}; color: {{ project.BGcolor }};">
           <h4 style="color: {{ project.color }};">
             {{ project.title }}
             <br>
@@ -31,7 +31,13 @@ js: main
               <a href="{{ project.project-url }}">visit site</a>
             </small>
           </h4>
-          <img class="b-lazy {{ project.classes }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ project.image }}" alt="">
+					<figure class="{{ project.classes }} {% if project.video %}video{% endif %}">
+					{% if project.video %}
+						<video class="device__video js-video-el" loop="true" muted="" autoplay><source src="{{ project.video }}" type="video/mp4"></video>
+					{% else %}
+          	<img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ project.image }}" alt="">				
+					{% endif %}
+					</figure>
           <span class="middler"></span>
         </div>
       </div>     
@@ -42,7 +48,7 @@ js: main
     <h2>Tools I like to use</h2>
     {% for logo in site.data.logos %}
     <div>
-      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ logo.img }}" class="b-lazy" alt="{{ logo.name }}" title="{{ logo.name }}">
+      <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='1000' height='1200'/>" data-src="{{ logo.img }}" class="b-lazy" alt="{{ logo.name }}" title="{{ logo.name }}">
     </div>  
     {% endfor %}
 </section>

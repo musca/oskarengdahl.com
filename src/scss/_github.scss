@@ -3,6 +3,9 @@
 	> div {
 		@include span(5 of 10);
 		@include breakpoint($medium){
+			@include span(2 of 6);
+	  }	
+		@include breakpoint($large){
 			@include span(2 of 10);
 	  }	
 		margin-bottom: gutter() * 2;
