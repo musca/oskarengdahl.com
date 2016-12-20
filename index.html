@@ -56,7 +56,7 @@ js: main
     <div class="leading">    
       <h3>Github</h3>
       projects and random stuff
-      <img class="octocat" alt="octocat" src="/dist/img/logos/octocat.svg">
+       <a href="{{ site.github.owner_url }}"><img class="octocat" alt="octocat" src="/dist/img/logos/octocat.svg"></a>
     </div>
     {% assign repos = site.github.public_repositories | sort: 'created_at' | reverse %}
     {% for repository in repos limit:9 %}
