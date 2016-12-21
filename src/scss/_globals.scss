@@ -188,7 +188,7 @@ a[disabled], .disabled {
 }
 .b-lazy {
 	transform: translateY(50px);
-  transition: opacity 500ms, transform 200ms ease-in-out;
+  transition: filter .5s, opacity 500ms, transform 200ms ease-in-out;
   max-width: 100%;
   opacity: 0;
 }
