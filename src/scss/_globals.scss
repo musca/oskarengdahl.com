@@ -196,13 +196,20 @@ a[disabled], .disabled {
 	transform: translateY(50px);
   opacity: 1;
 }
-.desktop-chrome {
+
+.desktop-chrome, 
+.phone-chrome {	
+	background-color: transparent;
+	&.loaded  {
+		background-color: #fff;
+	}
+}
+.loaded.desktop-chrome {
 	position: relative;
 	z-index: 2;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   box-shadow: 0px 0px 59px -1px rgba(0,0,0,0.22);
-	background-color: #fff;
 	padding-top: 15px;
 	&:before {
 		content: "•••";
@@ -216,13 +223,13 @@ a[disabled], .disabled {
 		z-index: 3;
 	}
 }
-.phone-chrome {
+
+.loaded.phone-chrome {
 	position: relative;
 	z-index: 2;
-	padding: 35px 10px 60px;
+	padding: 50px 10px 60px;
   border-radius: 2.3em;
   box-shadow: 0px 0px 59px -1px rgba(0,0,0,0.22);
-	background-color: #fff;
 	img {
 	  border: 1px solid;
 	  border-color: inherit;
@@ -235,7 +242,7 @@ a[disabled], .disabled {
 		line-height: 30px;
 		width: 20px;
 		margin-left: -12px;
-		top: 0px;
+		top: 5px;
 		left: 50%;
 		color: inherit;
 		z-index: 3;

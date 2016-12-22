@@ -4,7 +4,11 @@ var o = $;
 $(document).ready(function() {
   var didScroll = false;
   var didResize = false;
-  var bLazy = new Blazy();  
+	  var bLazy = new Blazy({
+		success: function(ele){
+			o(ele).parent().addClass("loaded");
+	    }
+	});
   var header = document.querySelector(".content > header");
   var greeting = document.querySelector(".greeting"),
       now = new Date(),
@@ -45,7 +49,7 @@ $(document).ready(function() {
       }
     }, 100);
   } 
-  o(document.body).addClass('loaded');
+  o(document.body).addClass('DOM-loaded');
   document.documentElement.removeAttribute("id");
   o("a").on("click", function(e) {
     document.documentElement.setAttribute("id","loading");
