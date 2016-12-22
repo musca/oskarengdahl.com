@@ -45,9 +45,9 @@ $(document).ready(function() {
       }
     }, 100);
   } 
-  o("body").addClass('loaded');
+  o(document.body).addClass('loaded');
   document.documentElement.removeAttribute("id");
   o("a").on("click", function(e) {
-    o("html").attr("id","loading");
+    document.documentElement.setAttribute("id","loading");
   });
 });
