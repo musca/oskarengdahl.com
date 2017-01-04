@@ -1,13 +1,15 @@
 //= require vendor/*.js
 'use strict';
 var o = $;
-$(document).ready(function() {
+$(function() {
+	document.documentElement.removeAttribute("id");
+	
   var didScroll = false;
   var didResize = false;
 	  var bLazy = new Blazy({
-		success: function(ele){
+		success: function(ele) {
 			o(ele).parent().addClass("loaded");
-	    }
+	  }
 	});
   var header = document.querySelector(".content > header");
   var greeting = document.querySelector(".greeting"),
@@ -48,10 +50,14 @@ $(document).ready(function() {
         
       }
     }, 100);
-  } 
-  o(document.body).addClass('DOM-loaded');
-  document.documentElement.removeAttribute("id");
+  }
+  o(document.body).addClass('DOM-loaded');  
   o("a").on("click", function(e) {
     document.documentElement.setAttribute("id","loading");
   });
+	$(window).bind('pageshow', function(event) {
+	    if (event.originalEvent.persisted) {
+	        window.location.reload() 
+	    }
+	});
 });
