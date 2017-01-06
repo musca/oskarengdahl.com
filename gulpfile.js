@@ -11,7 +11,10 @@ var sourcemaps  = require('gulp-sourcemaps');
 var messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
-
+var node_modules = [
+	'node_modules/susy/sass/', 
+	'node_modules/breakpoint-sass/stylesheets/'
+];
 /**
  * Build the Jekyll Site
  */
@@ -56,7 +59,7 @@ gulp.task('scripts', function() {
 gulp.task('sass', function () {
  return gulp.src('src/scss/*.scss')
   //.pipe(sourcemaps.init())
-  .pipe(sass().on('error', sass.logError))
+  .pipe(sass({includePaths: node_modules}).on('error', sass.logError))
   .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
   .pipe(cleanCSS())
   //.pipe(sourcemaps.write('maps'))  
