@@ -4,7 +4,7 @@
   position: relative;
   padding-bottom: gutter() * 2;
 		> div {
-		background-color: #f1e05a;
+		//background-color: #f1e05a;
 		margin: gutter() * 2;		
 		@include span(10 of 10);
 		height: 100% - (gutter() * 4);

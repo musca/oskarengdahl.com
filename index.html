@@ -61,14 +61,16 @@ js: main
     {% assign repos = site.github.public_repositories | sort: 'created_at' | reverse %}
     {% for repository in repos limit:9 %}
     <div>    
-      <a href="{{ repository.html_url }}" class="project-{{ forloop.index }} project-wrapper {% if repository.has_pages %} has-page{% endif %}">
+      <span class="project-{{ forloop.index }} project-wrapper {% if repository.has_pages %} has-page{% endif %}">
         {{ repository.language }}
         <h3>{{ repository.name }}</h3>
-        <p>{{ repository.description }}</p>
+		<p>{{ repository.description }}</p>
+		<a href="{{ repository.html_url }}" ><aside>&rarr;</aside><span>Prodject page</span></a>
+		<a href="{{ repository.homepage }}"><aside>&rarr;</aside><span>{{ repository.homepage }}</span> </a>
         <svg class="margin-top" width="441" height="393" viewBox="0 0 441 393" xmlns="http://www.w3.org/2000/svg">
 					<path d="M331.87 226H0v-56h334.902L204.767 39.865 244.365.267l195.868 195.868-.114.115.347.348-195.87 195.87-39.597-39.6L331.87 226z" fill="#444" fill-rule="evenodd"/>
 				</svg>    
-      </a>
+      </span>
     </div>
     {% endfor %}
 </section>
