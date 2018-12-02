@@ -17,7 +17,8 @@ exclude: [
   "Gemfile",
   "Gemfile.lock",
   "README.md",
-  "npm-debug.log"
+  "npm-debug.log",
+  "vendor"
 ]
 production_url: 'http://oskarengdahl.com'
 collections:
