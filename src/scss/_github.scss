@@ -1,14 +1,8 @@
-.github-new {
-	@include full;
+.github {
 	> div {
-		@include span(5 of 10);
-		@include breakpoint($medium){
-			@include span(2 of 6);
-	  }	
-		@include breakpoint($large){
-			@include span(2 of 10);
-	  }	
-		margin-bottom: gutter() * 2;
+    float: left;
+		width: 20%;
+    padding: 12px;
 	}
   .leading {
     min-height: 320px;
@@ -54,6 +48,9 @@
       position: relative;
       padding-left: 18px;
       transition: padding .5s;
+      overflow:hidden; 
+      line-height: 1.2em;
+      max-height: 1.2em;
       aside {
         display: block;
         width: 12px;
@@ -98,65 +95,3 @@
     $classID: $classID + 1.68;
   }
 }
-.github {
-  max-width: $max-width;
-  margin: 0 auto;
-  .unit {
-    position: relative;
-  }
-  .leading {
-    padding: 20px;
-    h3 {
-      line-height: 1;
-    }
-    small {
-      font-size: 14px;
-      line-height: 14px;
-    }
-  }
-  .octocat {
-    position: absolute;
-    bottom: -10px;
-    left:  10px;
-    width: 80px;
-  }
-  .project-wrapper {
-    font-size: 100%;
-    display: block;
-    min-height: 320px; 
-    padding: 15px; 
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    text-decoration: none;
-    h3 {
-      color: #111;
-    }
-    p {
-      color: #444;
-    }
-    &:hover svg {
-      left: 20px;
-    }
-    svg {
-      width: 48px;
-      height: 48px;
-      position: absolute;
-      bottom: 20px;
-      left: -100px;
-      transition: left .4s;
-    }
-  }
-
-  $githubBGcolor: aliceblue;
-  $classID: 0;
-
-  @for $i from 1 through 9 {     
-    .project-#{$i} {
-        background-color: darken($githubBGcolor, $classID);
-    }
-    $classID: $classID + 1.68;
-  }
-}
-

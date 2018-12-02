@@ -9,6 +9,10 @@
   .unit.one-fifth {
     width: 33%;
   }
+  .github > div {
+    width: 33% !important;
+    height: auto;
+  }
 }
 @media screen and (max-width: 767px) { 
   .video-container {
@@ -22,6 +26,13 @@
   .blog .content-wrapper {
     width: 100% !important;
   }
+  .github > div {
+    width: 50% !important;
+    height: auto;
+  }
+  .unit.one-fifth {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 532px) {
   .unit.one-fifth {
@@ -34,6 +45,9 @@
   }
   #what-ppl-say h3 {
     left: 22px;
+  }
+  .unit.one-fifth {
+    width: 33%;
   }
 }
 
@@ -76,8 +90,8 @@
   .content-wrapper {
 //    width: 94%;
   }
-  .flickr li {
-    width: 33.3% !important;
+  .github > div {
+    width: 50% !important;
     height: auto;
   }
 }
