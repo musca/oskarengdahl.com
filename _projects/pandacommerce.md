@@ -7,7 +7,7 @@ service: Design, Liquid, HTML, SCSS and JS code
 project-url: 'https://pandacommerce.se'
 image: '/dist/img/pandacommerce.jpg'
 classes: 'desktop-chrome'
-color: '#FFF'
+color: '#888'
 BGcolor: '#fafafa'
 ---
 <div class="half" markdown="1">
