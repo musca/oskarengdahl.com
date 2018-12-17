@@ -75,7 +75,7 @@
         opacity: 1;
       }
 			svg {
-	      left: 20px;
+	      left: 0px;
 	  }
     }
     svg {
@@ -85,6 +85,9 @@
       bottom: 20px;
       left: -100px;
       transition: left .4s;
+      path {
+        fill: #fafafa;
+      }
     }
   }
 
