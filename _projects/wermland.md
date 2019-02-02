@@ -8,7 +8,7 @@ project-url: 'https://dev-shop-wermland.pandacommerce.net'
 image: '/dist/img/wermlad-theme.png'
 classes: ''
 color: '#888'
-BGcolor: '#f1f1f1'
+BGcolor: '#d8e4e9'
 ---
 <div class="half" markdown="1">
   ![Wermland](/dist/img/wermlad-theme.png)
