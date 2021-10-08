@@ -1,0 +1,34 @@
+:root {
+  --font-mono: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono',
+    'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+  --color-light: #f3f4f6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-light: #1f2937;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  padding-top: 3.2rem;
+  font-weight: 400;
+  font-size: 3.6rem;
+  max-width: 32ch;
+}
+.hero {
+  width: 100%;
+}
+.mail-to {
+  display: inline-block;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.tools-logo {
+  width: 64px;
+  height: auto;
+}

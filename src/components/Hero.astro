@@ -1,0 +1,71 @@
+<hero>
+    <div class="img">
+        <img src="assets/phone.png" alt="">
+    </div>
+    <div class="img">
+        <img loading="lazy" class="desktop" src="assets/desktop.png" alt="">
+    </div>
+</hero>
+<section>
+    <h2>Theme – Rund</h2>
+    <p>A Shopify theme for sites selling visually-driven products such as apparel, beauty products, home decor, and furniture.</p>
+</section> 
+<style>
+    hero {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+        overflow: hidden;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    hero::-webkit-scrollbar {
+        display: none;
+    }
+    p {
+        margin-top: 0;
+        font-size: 2rem;
+        max-width: 60ch;
+    }
+    hero .img {
+        min-width: 100%;
+    }
+    hero .img + .img {
+        padding-left: 4rem;
+    }
+    hero .img:nth-child(1) {
+        min-width: 25%;
+    }
+    hero .img:nth-child(2) {
+        min-width: 105%;
+        max-width: 120rem;
+    }
+    hero .img img {
+        width: 100%;
+    }
+    hero .img:last-child::after {
+        width: 4rem;
+        border: 1px solid transparent;
+        content: "";
+        display: block;
+        left: 100%;
+        position: relative;
+        top: -100%;
+    }
+    @media(min-width: 1200px) {
+        hero {
+            padding-left: calc(50vw - 600px + 4rem);
+            padding-right: calc(50vw - 600px + 4rem);
+            scroll-padding-left: calc(50vw - 600px + 4rem);
+        }
+        
+        hero .img:last-child::after {
+            width: calc(50vw - 600px + 4rem);
+        }
+    }
+</style>

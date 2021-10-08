@@ -1,0 +1,70 @@
+<header>
+    <svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <circle id="Oval" stroke="#1B1B1B" stroke-width="8" cx="22" cy="22" r="18"></circle>
+        </g>
+    </svg>
+    <input id="menu-toggle" type="checkbox" style="display: none;">
+    <label for="menu-toggle">
+        <svg width="44px" height="27px" viewBox="0 0 44 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <path d="M44,22 L44,27 L0,27 L0,22 L44,22 Z M44,0 L44,5 L0,5 L0,0 L44,0 Z" id="Combined-Shape" fill="#1B1B1B"></path>
+            </g>
+        </svg>
+    </label>         
+    <div class="content">
+        <div>
+            <a href="">work</a>
+            <a href="">about</a>
+            <a href="">contact</a>
+            <a href=""></a>
+        </div>
+    </div>
+</header>
+<style>
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 4.8rem;
+    }
+    details summary::-webkit-details-marker { display:none; }
+    label {
+        cursor: pointer;
+    }
+    svg {
+        width: 28px;
+        height: auto;
+    }
+    .content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+    }
+    .content > div {
+        top: -80px;
+        position: relative;
+        height: 0px;
+        transition: all 0.5s cubic-bezier(0.0, 0.0, 0.58, 1.0);
+        display: flex;
+        align-items: center;
+    }
+    #menu-toggle:checked ~ .content > div {
+        height: 80px;
+        top: 0;
+        transition: all 0.4s cubic-bezier(0.0, 0.0, 0.58, 1.0);
+    }
+    .content > div a {
+        font-size: 2rem;
+        text-decoration: none;
+    }
+    .content > div a:hover {
+        text-decoration: underline;
+    }
+    .content > div a + a {
+        margin-left: 2.4rem;
+        
+    }
+</style>

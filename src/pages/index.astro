@@ -1,0 +1,54 @@
+---
+// Component Imports
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Orbit from '../components/rotate.astro';
+//import Test from '../components/Test.astro';
+// You can import components from any supported Framework here!
+
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+let title = 'My Astro Site';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/style/global.css">
+    <link rel="stylesheet" href="/style/home.css">
+</head>
+<body>
+    <Header />
+    <main>
+        <section>
+            <h1><strong>I am a designer and coder</strong> with a focus on creating useful, functional E-commerce sites</h1>
+        </section>
+        
+        <Hero />
+        <section>
+            <Orbit />
+        </section>
+        <section>
+            <p>I like to solve problems that results in making more money for my clients or workplace.</p>
+            <p>Do you want to work with me, just have a chat or give me an job offer? </p>
+            <p>Then contact me <a class="mail-to" href="">moc.lhadgnerakso@olleh</a></p>            
+        </section>
+        <!--
+           - You can also use imported framework components directly in your markup!
+           -
+           - Note: by default, these components are NOT interactive on the client.
+           - The `:visible` directive tells Astro to make it interactive.
+           -
+           - See https://docs.astro.build/core-concepts/component-hydration/ 
+           -->
+    </main>
+</body>
+</html>
