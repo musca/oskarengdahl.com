@@ -1,0 +1,48 @@
+<script>
+        const productQuery = () => `
+            query {
+                shop {
+                products( first: 10) {
+                    edges{
+                    node {
+                        id
+                        handle
+                        title
+                
+                        variants(first: 10){
+                        edges{
+                            node{
+                            title
+                        }
+                        }
+                    }
+                    }
+                }  
+                }
+            }
+            }
+        `;
+
+        const STOREFRONT_ACCESS_TOKEN =  '32641232ebde30e8e2b5479433c40c51'
+
+        const GRAPHQL_URL = 'https://theme-rund.myshopify.com/api/2020-07/graphql.json'
+
+        const GRAPHQL_BODY  = () => {
+            return {
+            'async': true,
+            'crossDomain': true,
+            'method': 'POST',
+            'headers': {
+                'X-Shopify-Storefront-Access-Token': STOREFRONT_ACCESS_TOKEN,
+                'Content-Type': 'application/graphql',
+            },
+            'body': productQuery()
+            };
+        }
+
+        fetch(GRAPHQL_URL, GRAPHQL_BODY())
+        .then(res => res.json())
+        .then(products => {
+            console.log('products', products)
+        })
+    </script>

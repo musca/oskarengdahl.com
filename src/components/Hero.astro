@@ -1,9 +1,9 @@
 <hero>
     <div class="img">
-        <img src="/assets/phone.png" alt="">
+        <img src="/assets/phone.png" alt="" importance="low">
     </div>
     <div class="img">
-        <img loading="lazy" class="desktop" src="/assets/desktop.png" alt="">
+        <img rel="preload" loading="lazy" class="desktop" src="/assets/desktop.png" importance="high" alt="">
     </div>
 </hero>
 <section>
@@ -12,6 +12,7 @@
 </section> 
 <style>
     hero {
+        position: relative;
         max-width: 100%;
         display: flex;
         align-items: center;
@@ -47,15 +48,6 @@
     }
     hero .img img {
         width: 100%;
-    }
-    hero .img:last-child::after {
-        width: 4rem;
-        border: 1px solid transparent;
-        content: "";
-        display: block;
-        left: 100%;
-        position: relative;
-        top: -100%;
     }
     @media(min-width: 1200px) {
         hero {

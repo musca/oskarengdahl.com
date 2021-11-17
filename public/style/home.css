@@ -23,7 +23,7 @@ h1 {
 .hero {
   width: 100%;
 }
-.mail-to {
+.hello {
   display: inline-block;
   unicode-bidi: bidi-override;
   direction: rtl;
