@@ -1,0 +1,80 @@
+---
+    const tech = [
+        {
+            "name": "sketch",
+            "img": "sketch.svg"
+        },
+        {
+            "name": "shopify",
+            "img": "shopify.svg"
+        },
+        {
+            "name": "Astro",
+            "img": "astro.svg"
+        },
+        {
+            "name": "Cloudflare Pages",
+            "img": "pages.svg"
+        },
+        {
+            "name": "Cloudflare Workers",
+            "img": "workers.svg"
+        },
+        {
+            "name": "github",
+            "img": "github.svg"
+        },
+        {
+            "name": "sass",
+            "img": "sass.svg"
+        },
+        {
+            "name": "terminal",
+            "img": "terminal.svg"
+        },
+        {
+            "name": "mac",
+            "img": "mac.svg"
+        }
+    ]
+---
+
+<div class="tech">
+    <h2>Some of the tech and tools i like to use</h2>
+    <section>
+        {tech.map((repo) => (
+            <img src={`/assets/logos/${repo.img}`} height="72" title={repo.name} alt={repo.name}>
+        ))}
+    </section>
+</div>
+<style>
+    .tech {
+        max-width: calc(var(--page-width) - 8rem);
+        background: rgb(246, 246, 246);
+        margin: 8rem auto 4.8rem;
+        padding: 6.4rem 2rem;
+    }
+    h2 {
+        font-size: 3.6rem;
+        padding-bottom: 4.8rem;
+        text-align: center;
+    }
+    section {
+        max-width: 120rem;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    img {
+        flex-basis: 25%;
+        min-width: 16rem;
+        max-height: 7.2rem;
+        filter: grayscale(100%);
+        margin: 4.4rem 0;
+        transition: filter .5s ease-in-out;
+    }
+    img:hover {
+        filter: none;
+    }
+</style>

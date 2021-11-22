@@ -55,15 +55,15 @@
     hero .img img {
         width: 100%;
     }
-    @media(min-width: 1200px) {
+    @media(min-width: 1600px) {
         hero {
-            padding-left: calc(50vw - 600px + 4rem);
-            padding-right: calc(50vw - 600px + 4rem);
-            scroll-padding-left: calc(50vw - 600px + 4rem);
+            padding-left: calc(50vw - var(--page-width) / 2 + 4rem);
+            padding-right: calc(50vw - var(--page-width) / 2 + 4rem);
+            scroll-padding-left: calc(50vw - var(--page-width) / 2 + 4rem);
         }
         
         hero .img:last-child::after {
-            width: calc(50vw - 600px + 4rem);
+            width: calc(50vw - var(--page-width) / 2 + 4rem);s
         }
     }
 </style>
