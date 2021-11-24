@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Tech from '../components/Tech.astro';
 import Footer from '../components/Footer.astro';
+import '../components/Repos.js';
 // You can import components from any supported Framework here!
 
 
@@ -33,7 +34,7 @@ let title = 'My Astro Site';
     <Header />
     <main>
         <section>
-            <h1><strong>I am a designer and coder</strong> with a focus on creating useful, functional E-commerce sites</h1>
+            <h1><strong>I am a designer and coder</strong> with the focus on creating useful, functional E-commerce sites</h1>
         </section>
         
         <Hero />
@@ -41,6 +42,7 @@ let title = 'My Astro Site';
             <Orbit />
         </section-->
         <Tech />
+        <my-repos user="musca" client:visible />
         <Footer />
     </main>
 </body>

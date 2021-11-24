@@ -8,7 +8,7 @@ document.addEventListener("click", function (event) {
 const selection = document.getSelection();
 
 document.addEventListener('selectionchange', () => {
-  if (selection.focusNode.data == "moc.lhadgnerakso@olleh") {
+  if (selection.focusNode.data && selection.focusNode.data == "moc.lhadgnerakso@olleh") {
     const adress = selection.focusNode.data.split('').reverse().join('');
     const targetEl = document.querySelector(".hello");
     targetEl.innerHTML = adress;
