@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Tech from '../components/Tech.astro';
 import Footer from '../components/Footer.astro';
+import Test from '../components/Github.astro';
 import '../components/Repos.js';
 // You can import components from any supported Framework here!
 
@@ -42,7 +43,10 @@ let title = 'My Astro Site';
             <Orbit />
         </section-->
         <Tech />
-        <my-repos user="musca" client:visible />
+        <section class="github">
+            <Test />
+            <my-repos user="musca" client:idle />
+        </section>
         <Footer />
     </main>
 </body>

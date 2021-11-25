@@ -30,3 +30,37 @@ h1 {
   width: 64px;
   height: auto;
 }
+.github {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.github ul {
+  list-style: none;
+  
+}
+.github > * {
+  flex: 1;
+}
+.github-profile {
+  max-width: 40%;
+  flex: 1;
+  min-width: 28rem;
+  padding-bottom: 4rem;
+}
+.github-profile > * {
+  text-align: center;
+}
+.github-langs {
+  padding-top: 0.8rem;
+}
+.github-langs span {
+  font-size: 12px;
+  display: inline-block;
+  background-color: #333;
+  color: #f3f4f6;
+  margin: 0.8rem 0.4rem 0 0;
+  padding: 0.4rem 0.6rem;
+  border-radius: 2px;
+}

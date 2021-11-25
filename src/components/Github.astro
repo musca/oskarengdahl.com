@@ -1,0 +1,34 @@
+---
+    const profileResponse = await fetch("https://api.github.com/users/musca");
+    const profile = await profileResponse.json();
+    const reposResponse = await fetch("https://api.github.com/users/musca/repos");
+    const repos = await reposResponse.json();
+
+    const langs = [];
+    repos.map((repo) => 
+        langs.push(repo.language)
+    )
+    let uniqueLangs = [...new Set(langs)]
+---
+<style>
+    img {
+        border-radius: 5rem;
+    }
+    .github-langs span {
+        display: inline-block;
+        margin: 0.4rem 0.8rem 0.4rem 0;
+    }
+</style>
+<div class="github-profile">
+    <section>
+        <img src={profile.avatar_url} width="140" height="140" loading="lazy">
+        <h4>{profile.login}</h4>
+        <div>{profile.location}</div>
+        <!--div>joined: {profile.created_at.split("-")[0]}</div-->
+        <div class="github-langs">
+            {uniqueLangs.map((lang) => 
+                `<span>${lang}</span>&nbsp;`
+            )}
+        </div>
+    </section>
+</div>
