@@ -41,7 +41,8 @@ class Repos extends LitElement {
         margin: 0 0 0.4rem 0;
       }
       a {
-        color: #58a6ff;
+        color: #009688;
+        text-decoration: none;
       }
     `;
 

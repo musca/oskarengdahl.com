@@ -1,14 +1,13 @@
 ---
     const profileResponse = await fetch("https://api.github.com/users/musca");
     const profile = await profileResponse.json();
+    
     const reposResponse = await fetch("https://api.github.com/users/musca/repos");
     const repos = await reposResponse.json();
 
     const langs = [];
-    repos.map((repo) => 
-        langs.push(repo.language)
-    )
-    let uniqueLangs = [...new Set(langs)]
+    repos.map((repo) => langs.push(repo.language));
+    const uniqueLangs = [...new Set(langs)];
 ---
 <style>
     img {
