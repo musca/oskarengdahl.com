@@ -41,16 +41,14 @@ class Repos extends LitElement {
         margin: 0 0 0.4rem 0;
       }
       a {
-        color: #009688;
+        color: #079bd9;
         text-decoration: none;
       }
     `;
 
     render() {
         if (!this.repos) {
-            return html`
-                <h4>Loading...</h4>
-            `;
+          return html`<aside></aside>`;
         }
         return html`
           <ul>

@@ -34,23 +34,25 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
 }
 .github ul {
   list-style: none;
   
 }
 .github > * {
-  flex: 1;
+  flex-basis: 50%;
 }
 .github-profile {
-  max-width: 40%;
+  max-width: 50%;
   flex: 1;
   min-width: 28rem;
   padding-bottom: 4rem;
 }
 .github-profile > * {
   text-align: center;
+}
+.github-profile img {
+  border-radius: 5rem;
 }
 .github-langs {
   padding-top: 0.8rem;
