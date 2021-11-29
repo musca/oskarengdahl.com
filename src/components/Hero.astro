@@ -31,33 +31,17 @@
     }
 </style>
 <script>
-    const hero = document.querySelector(".scrollable");
-    const scrollbarThumb = document.querySelector(".scrollbar-thumb");
+    window.addEventListener("load", function() {
+        const hero = document.querySelector(".scrollable");
+        //const scrollbarThumb = document.querySelector(".scrollbar-thumb");
 
-    hero.nextElementSibling.style.setProperty('--thumb-width', window.innerWidth / hero.scrollWidth * 100 +"%");
-    
-    hero.onscroll = function() {
-        hero.nextElementSibling.style.setProperty('--thumb-x-pos', hero.scrollLeft / window.innerWidth * 100 +"%");
-    };
+        hero.nextElementSibling.style.setProperty('--thumb-width', window.innerWidth / hero.scrollWidth * 100 +"%");
+        console.log(window.innerWidth / hero.scrollWidth * 100 +"%")
 
-    scrollbarThumb.onmousedown = function(event) {
-
-        function onMouseMove(event) {
-            console.log(event.pageX);
-        }
-
-        // (2) move the ball on mousemove
-        scrollbarThumb.addEventListener('mousemove', onMouseMove);
-
-        //console.log(event)
-        scrollbarThumb.onmouseup = function(event) {
-            console.log(event)
-            scrollbarThumb.removeEventListener('mousemove', onMouseMove);
-            scrollbarThumb.onmouseup = null;
+        hero.onscroll = function() {
+            hero.nextElementSibling.style.setProperty('--thumb-x-pos', hero.scrollLeft / window.innerWidth * 100 +"%");
         };
-    }
-    
-    
+    });
 </script>
 
 <section>

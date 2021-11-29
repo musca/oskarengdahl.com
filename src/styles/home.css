@@ -52,7 +52,15 @@ h1 {
   text-align: center;
 }
 .github-profile img {
+  margin: 0 auto;
   border-radius: 5rem;
+}
+.github-profile a {
+  padding: 0.8rem 0;
+  display: inline-block;
+}
+.github-profile a strong {
+  font-weight: 700;
 }
 .github-langs {
   padding-top: 0.8rem;

@@ -60,7 +60,8 @@ class Repos extends LitElement {
                       <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"></path>
                     </svg>
                     <div>
-                      <h4>${u.commit[0].message}</h4>
+                      ${u.date}: <strong>${u.commit[0].message}</strong>
+                      <br>
                       pushed commit
                       <a href=${(u.commit) ? u.commit[0].url.replace('api.','').replace('/repos','') : null }>
                         ${(u.commit) ? u.commit[0].sha.slice(0, 7) : null }

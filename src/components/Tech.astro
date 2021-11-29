@@ -43,7 +43,7 @@
     <h2>Some of the tech and tools i like to use</h2>
     <section>
         {tech.map((repo) => (
-            <img src={`/assets/logos/${repo.img}`} height="72" title={repo.name} alt={repo.name}>
+            <img src={`/assets/logos/${repo.img}`} loading="lazy" height="72" title={repo.name} alt={repo.name}>
         ))}
     </section>
 </div>
@@ -68,7 +68,7 @@
     }
     img {
         flex-basis: 20%;
-        min-width: 16rem;
+        min-width: 12rem;
         max-height: 4.8rem;
         filter: grayscale(100%);
         margin: 4.4rem 0;
