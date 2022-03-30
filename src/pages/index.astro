@@ -1,10 +1,14 @@
 ---
+import '../styles/base.css'
+import '../styles/global.css'
+import '../styles/home.css'
 // Component Imports
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Tech from '../components/Tech.astro';
 import Footer from '../components/Footer.astro';
-import Test from '../components/Github.astro';
+import Github from '../components/Github.astro';
+
 import '../components/Repos.js';
 // You can import components from any supported Framework here!
 
@@ -24,11 +28,6 @@ let title = 'My Astro Site';
     <meta name="viewport" content="width=device-width">
     <title>{title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <style>
-        
-    </style>
-    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
-    <link rel="stylesheet" href={Astro.resolve('../styles/home.css')}>
     <script src="/base.js"></script>
 </head>
 <body>
@@ -44,7 +43,7 @@ let title = 'My Astro Site';
         </section-->
         <Tech />
         <section class="github">
-            <Test />
+            <Github />
             <my-repos user="musca" client:idle />
         </section>
         <Footer />

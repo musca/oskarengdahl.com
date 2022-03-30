@@ -8,6 +8,7 @@
     const langs = [];
     repos.map((repo) => langs.push(repo.language));
     const uniqueLangs = [...new Set(langs)];
+    const langsHtml = uniqueLangs.map((lang) => `<span>${lang}</span>`)
 ---
 
 <div class="github-profile">
@@ -15,11 +16,6 @@
         <img src={profile.avatar_url} width="140" height="140" loading="lazy">
         <a href="" class="h4">github.com/<strong>{profile.login}</strong></a>
         <div>{profile.location}</div>
-        <!--div>joined: {profile.created_at.split("-")[0]}</div-->
-        <div class="github-langs">
-            {uniqueLangs.map((lang) => 
-                `<span>${lang}</span>&nbsp;`
-            )}
-        </div>
+        <div class="github-langs" set:html={`${langsHtml.join(' ')}`} />
     </section>
 </div>
