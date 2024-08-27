@@ -1,0 +1,16 @@
+<script>
+  /**
+   * @param {string} elementType
+   * @returns
+   */
+
+  function appendElement(elementType, target) {
+    function createElement() {
+      return document.createElement(elementType);
+    }
+    const appendTarget = document.querySelector(target);
+    appendTarget.appendChild(createElement());
+  }
+
+  appendElement("p", "body");
+</script>

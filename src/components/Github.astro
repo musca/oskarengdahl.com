@@ -12,10 +12,10 @@
 ---
 
 <div class="github-profile">
-    <section>
+    <div>
         <img src={profile.avatar_url} width="140" height="140" loading="lazy">
-        <a href="" class="h4">github.com/<strong>{profile.login}</strong></a>
+        <a href=`https://github.com/${profile.login}` class="h4">github.com/<strong>{profile.login}</strong></a>
         <div>{profile.location}</div>
-        <div class="github-langs" set:html={`${langsHtml.join(' ')}`} />
-    </section>
+        <div class="github-langs" set:html={`${langsHtml.join(' ')}`}></div>
+    </div>
 </div>

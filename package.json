@@ -9,11 +9,6 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/lit": "^0.0.2",
-    "@astrojs/renderer-lit": "^0.4.0",
-    "@webcomponents/template-shadowroot": "^0.1.0",
-    "astro": "^0.25.4",
-    "lit": "^2.2.1",
-    "sass": "^1.49.9"
+    "astro": "^4.13.1"
   }
 }

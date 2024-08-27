@@ -1,52 +1,75 @@
 ---
-import '../styles/base.css'
-import '../styles/global.css'
-import '../styles/home.css'
+import "../styles/hero.css";
+import "../styles/global.css";
+import "../styles/home.css";
 // Component Imports
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import Tech from '../components/Tech.astro';
-import Footer from '../components/Footer.astro';
-import Github from '../components/Github.astro';
-
-import '../components/Repos.js';
-// You can import components from any supported Framework here!
-
-
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-let title = 'My Astro Site';
-
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Tech from "../components/Tech.astro";
+import Footer from "../components/Footer.astro";
+import T from "../components/t.astro";
+//import Github from '../components/Github.astro';
+//import Repos from '../components/Repos.jsx';
+let title = "My Astro Site";
+console.log(title);
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <script src="/base.js"></script>
-</head>
-<body>
+    <script is:inline src="/base.js"></script>
+    <script
+      src="https://unpkg.com/htmx.org@1.9.12"
+      integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
     <Header />
     <main>
-        <section>
-            <h1><strong>I am a designer and coder</strong> with the focus on creating useful, functional E-commerce sites</h1>
-        </section>
-        
-        <Hero />
-        <!--section>
-            <Orbit />
-        </section-->
-        <Tech />
-        <section class="github">
-            <Github />
-            <my-repos user="musca" client:idle />
-        </section>
-        <Footer />
+      <!-- <button popovertarget="info"
+            hx-get="/repos"
+            hx-trigger="click"
+            hx-target="#info"
+            class="">get info</button> -->
+      <!-- <div id="info" popover role="tooltip">laddar info</div> -->
+      <section>
+        <h1>
+          <strong>I am a designer and coder</strong> with the focus on creating useful,
+          functional E-commerce sites
+        </h1>
+      </section>
+      <Hero />
+      <!--section>
+        <Orbit />
+      </section-->
+      <Tech />
+      <Footer />
     </main>
-</body>
+    <button popovertarget="info" hx-target="#info" class="">get info</button>
+    <div id="info" popover="" role="tooltip">
+      <h1>Oskar Engdahl</h1>
+      <img
+        src="https://avatars.githubusercontent.com/u/3599914?v=4"
+        width="140"
+        height="140"
+        loading="lazy"
+      />
+      <div class="github-langs">
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>Liquid</span>
+        <span>CSS</span>
+        <span>Astro</span>
+      </div>
+      <button>Klicka på mig</button>
+    </div>
+    <T />
+  </body>
 </html>
