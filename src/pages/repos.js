@@ -30,15 +30,4 @@ export const GET = async ({ params, request }) => {
       },
     );
   }
-
-  const body = await request.json();
-  const name = body.name;
-  return new Response(
-    JSON.stringify({
-      message: "Your name was: " + name,
-    }),
-    {
-      status: 200,
-    },
-  );
 };
