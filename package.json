@@ -9,9 +9,9 @@
     "preview": "wrangler pages dev ./dist"
   },
   "devDependencies": {
-    "astro": "^4.13.1"
+    "astro": "^4.16.12"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^11.0.4"
+    "@astrojs/cloudflare": "^11.2.0"
   }
 }
