@@ -1,21 +1,23 @@
 ---
-    const profileResponse = await fetch("https://api.github.com/users/musca");
-    const profile = await profileResponse.json();
-    
-    const reposResponse = await fetch("https://api.github.com/users/musca/repos");
-    const repos = await reposResponse.json();
+const profileResponse = await fetch("https://api.github.com/users/musca");
+const profile = await profileResponse.json();
 
-    const langs = [];
-    repos.map((repo) => langs.push(repo.language));
-    const uniqueLangs = [...new Set(langs)];
-    const langsHtml = uniqueLangs.map((lang) => `<span>${lang}</span>`)
+const reposResponse = await fetch("https://api.github.com/users/musca/repos");
+const repos = await reposResponse.json();
+
+const langs = [];
+repos.map((repo) => repo.language != null && langs.push(repo.language));
+const uniqueLangs = [...new Set(langs)];
+const langsHtml = uniqueLangs.map((lang) => `<span>${lang}</span>`);
 ---
 
 <div class="github-profile">
-    <div>
-        <img src={profile.avatar_url} width="140" height="140" loading="lazy">
-        <a href=`https://github.com/${profile.login}` class="h4">github.com/<strong>{profile.login}</strong></a>
-        <div>{profile.location}</div>
-        <div class="github-langs" set:html={`${langsHtml.join(' ')}`}></div>
-    </div>
+  <div>
+    <img src={profile.avatar_url} width="140" height="140" loading="lazy" />
+    <a href=`https://github.com/${profile.login}` class="h4"
+      >github.com/<strong>{profile.login}</strong></a
+    >
+    <div>{profile.location}</div>
+    <div class="github-langs" set:html={`${langsHtml.join(" ")}`} />
+  </div>
 </div>
