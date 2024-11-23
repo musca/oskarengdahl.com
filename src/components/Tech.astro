@@ -5,17 +5,14 @@ const tech = [
     img: "sketch.svg",
   },
   {
-    name: "Quickbutik",
-    img: "quickbutik.svg",
+    name: "Zed",
+    img: "zed.svg",
   },
   {
     name: "Astro",
     img: "astro.svg",
   },
-  {
-    name: "Zed",
-    img: "zed.svg",
-  },
+
   {
     name: "Cloudflare Pages",
     img: "pages.svg",
@@ -29,16 +26,28 @@ const tech = [
     img: "github.svg",
   },
   {
-    name: "shopify",
-    img: "shopify.svg",
-  },
-  {
     name: "terminal",
     img: "terminal.svg",
   },
   {
+    name: "Quickbutik",
+    img: "quickbutik.svg",
+  },
+  {
+    name: "shopify",
+    img: "shopify.svg",
+  },
+  {
     name: "mac",
     img: "mac.svg",
+  },
+  {
+    name: "HTML",
+    img: "html.svg",
+  },
+  {
+    name: "CSS",
+    img: "css.svg",
   },
 ];
 ---
@@ -90,5 +99,22 @@ const tech = [
   }
   img:hover {
     filter: none;
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+      //scale: 0.8;
+    }
+    to {
+      filter: grayscale(0%);
+      opacity: 1;
+      //scale: 1;
+    }
+  }
+
+  img {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 25% cover 50%;
   }
 </style>

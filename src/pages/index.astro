@@ -1,55 +1,33 @@
 ---
-import "../styles/hero.css";
-import "../styles/global.css";
-import "../styles/home.css";
+import Layout from "../layouts/main.astro";
 // Component Imports
-import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import Tech from "../components/Tech.astro";
 import Footer from "../components/Footer.astro";
 import T from "../components/t.astro";
 import Github from "../components/Github.astro";
-let title = "oskarengdahl.com";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="color-scheme" content="dark light" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <link rel="icon" href="favicon.svg" />
-    <link rel="mask-icon" href="mask-icon.svg" color="#000000" />
-    <script is:inline src="/base.js"></script>
-    <script
-      is:inline
-      src="https://unpkg.com/htmx.org@1.9.12"
-      integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2"
-      crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <Header />
-    <main>
-      <!-- <button popovertarget="info"
-            hx-get="/repos"
-            hx-trigger="click"
-            hx-target="#info"
-            class="">get info</button> -->
-      <!-- <div id="info" popover role="tooltip">laddar info</div> -->
-      <section>
-        <h1>
-          <strong>I am a designer and coder</strong> with the focus on creating useful,
-          functional E-commerce sites
-        </h1>
-      </section>
-      <Hero />
-      <!--section>
-        <Orbit />
-      </section-->
-      <Tech />
-      <Github />
-      <Footer />
-    </main>
-  </body>
-</html>
+<Layout>
+  <main>
+    <!-- <button popovertarget="info"
+              hx-get="/repos"
+              hx-trigger="click"
+              hx-target="#info"
+              class="">get info</button> -->
+    <!-- <div id="info" popover role="tooltip">laddar info</div> -->
+    <section>
+      <h1>
+        <strong>I am a designer and coder</strong> with the focus on creating useful,
+        functional E-commerce sites
+      </h1>
+    </section>
+    <Hero />
+    <!--section>
+          <Orbit />
+        </section-->
+    <Tech />
+    <Footer />
+  </main>
+  <script is:inline src="/base.js"></script>
+</Layout>

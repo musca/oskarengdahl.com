@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/main.astro";
+
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("now")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<Layout>
+  <main class="content">
+    <ul style="width: fit-content;">
+      {
+        posts.map((post) => (
+          <li>
+            <time datetime="">
+              {post.data.pubDate.toLocaleDateString("en-us", {
+                year: "numeric",
+                month: "short",
+              })}
+            </time>
+
+            <p>{post.body}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>

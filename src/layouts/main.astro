@@ -1,0 +1,30 @@
+---
+import "../styles/hero.css";
+import "../styles/global.css";
+import "../styles/home.css";
+
+import Header from "../components/Header.astro";
+
+let title = "oskarengdahl.com";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="icon" href="favicon.svg" />
+    <link rel="mask-icon" href="mask-icon.svg" color="#000000" />
+    <script
+      is:inline
+      src="https://unpkg.com/htmx.org@1.9.12"
+      integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <Header />
+    <slot />
+  </body>
+</html>
